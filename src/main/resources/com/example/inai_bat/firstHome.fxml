@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inai_bat.controller.FirstHomeController">
+    <Label fx:id="textLabel" text="Hello World, Hallo Welt"/>
+</VBox>
