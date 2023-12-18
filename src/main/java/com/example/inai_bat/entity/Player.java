@@ -16,8 +16,8 @@ public class Player extends ImageView {
     boolean up, down, left, right;
     double maxX, maxY;
 
-    public Player(int x, int y, Image upStand, Image upLeft, Image upRight, Image downLeft,
-                  Image downRight, Image rightLeft, Image rightRight, Image leftRight, Image leftLeft, double maxX, double maxY) {
+    public Player(int x, int y, Image upStand, Image upLeft, Image upRight, Image downLeft, Image downRight,
+                  Image rightLeft, Image rightRight, Image leftRight, Image leftLeft, double maxX, double maxY) {
         super(upStand);
         this.upStand = upStand;
         this.upLeft = upLeft;
@@ -53,7 +53,7 @@ public class Player extends ImageView {
 
     public void openFirstHome() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("firstHome.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstHome.fxml"));
             Parent parent = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
 

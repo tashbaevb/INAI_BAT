@@ -1,15 +1,29 @@
 package com.example.inai_bat;
 
-import com.example.inai_bat.controller.GameController;
+import com.example.inai_bat.controller.MainMenuController;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainApplication extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception {
-        GameController gameController = new GameController(stage);
+    public void start(Stage primaryStage) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("mainMenu.fxml"));
+        Parent root = loader.load();
+        MainMenuController mainMenuController = loader.getController();
+
+        Scene scene = new Scene(root, 400, 300);
+        primaryStage.setTitle("Главное меню");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
+
+
 
     public static void main(String[] args) {
         launch(args);

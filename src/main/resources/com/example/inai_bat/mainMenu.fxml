@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.inai_bat.controller.MainMenuController">
+    <Button fx:id="playButton" text="Играть" onAction="#handlePlayButton"/>
+</StackPane>

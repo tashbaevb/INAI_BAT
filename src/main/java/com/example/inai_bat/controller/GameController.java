@@ -1,4 +1,3 @@
-// GameController.java
 package com.example.inai_bat.controller;
 
 import com.example.inai_bat.entity.Player;
@@ -13,8 +12,10 @@ import javafx.stage.Stage;
 public class GameController {
     private Player player;
     private ParallaxBackground parallaxBackground;
+    private Stage stage;
 
     public GameController(Stage stage) {
+        this.stage = stage;
         Image backgroundImage = new Image(getClass().getResourceAsStream("/player/map_winter.png"));
         Image upStand = new Image(getClass().getResourceAsStream("/player/static.png"));
         Image upLeft = new Image(getClass().getResourceAsStream("/player/up_left.png"));
@@ -48,16 +49,21 @@ public class GameController {
         }.start();
     }
 
+    public static void startGame() {
+        Stage gameStage = new Stage();
+        GameController gameController = new GameController(gameStage);
+    }
+
     private void update() {
         player.move();
         parallaxBackground.update();
     }
-
-    private void handleKeyPress(KeyCode code) {
-        player.handleKeyPress(code);
-    }
-
-    private void handleKeyRelease(KeyCode code) {
-        player.handleKeyRelease(code);
-    }
+//
+//    private void handleKeyPress(KeyCode code) {
+//        player.handleKeyPress(code);
+//    }
+//
+//    private void handleKeyRelease(KeyCode code) {
+//        player.handleKeyRelease(code);
+//    }
 }
