@@ -58,12 +58,4 @@ public class GameController {
         player.move();
         parallaxBackground.update();
     }
-//
-//    private void handleKeyPress(KeyCode code) {
-//        player.handleKeyPress(code);
-//    }
-//
-//    private void handleKeyRelease(KeyCode code) {
-//        player.handleKeyRelease(code);
-//    }
 }

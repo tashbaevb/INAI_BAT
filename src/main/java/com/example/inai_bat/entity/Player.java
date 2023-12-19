@@ -10,8 +10,7 @@ import javafx.stage.Stage;
 
 public class Player extends ImageView {
 
-    Image upStand, upLeft, upRight, downLeft, downRight, rightLeft, rightRight, leftRight, leftLeft;
-    Image currentImage;
+    Image upStand, upLeft, upRight, downLeft, downRight, rightLeft, rightRight, leftRight, leftLeft, currentImage;
 
     boolean up, down, left, right;
     double maxX, maxY;
@@ -45,15 +44,19 @@ public class Player extends ImageView {
         else if (code == KeyCode.LEFT) left = true;
         else if (code == KeyCode.RIGHT) right = true;
         else if (code == KeyCode.E) {
-            if (getTranslateX() == 0 && getTranslateY() == 0) {
+            if (getTranslateX() == 10 && getTranslateY() == 10) {
                 openFirstHome();
+            } else if (getTranslateX() == 20 && getTranslateY() == 20) {
+                openSecondHome();
+            } else if (getTranslateX() == 0 && getTranslateY() == 0) {
+                openThirdHome();
             }
         }
     }
 
     public void openFirstHome() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstHome.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/firstHome.fxml"));
             Parent parent = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
 
@@ -66,6 +69,39 @@ public class Player extends ImageView {
             e.printStackTrace();
         }
     }
+
+
+    public void openSecondHome() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/secondHome.fxml"));
+            Parent parent = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+            ((Stage) getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void openThirdHome() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/thirdHome.fxml"));
+            Parent parent = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+            ((Stage) getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void handleKeyRelease(KeyCode code) {
         if (code == KeyCode.UP) up = false;

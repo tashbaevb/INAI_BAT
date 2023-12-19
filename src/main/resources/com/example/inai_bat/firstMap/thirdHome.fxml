@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0"
+            prefWidth="1412.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.inai_bat.controller.firstMap.ThirdHomeController">
+
+    <children>
+        <ImageView fitHeight="777.0" fitWidth="1413.0">
+            <image>
+                <Image url="@home_background.png"/>
+            </image>
+        </ImageView>
+        <Pane prefHeight="782.0" prefWidth="1413.0" style="-fx-background-color: rgba(0, 0, 0, 0.7);">
+            <children>
+                <Label fx:id="label" layoutX="6.0" layoutY="7.0" prefHeight="707.0" prefWidth="1407.0"
+                       style="-fx-background-color: rgba(253, 255, 245, 0.7); -fx-padding: 10; -fx-border-color: #000000; -fx-border-width: 5; -fx-background-radius: 10;"
+                       text="&quot;Я проводил тот вечер в своем доме, читая книги. Никаких отклонений от этого рутинного вечера я не помню. Если нужны дополнительные доказательства, могу предоставить свидетельства от соседей, которые, возможно, видели меня в тот вечер или слышали, что я был дома&quot;"
+                       textFill="#070707">
+                    <font>
+                        <Font size="29.0"/>
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+
+                <Pane layoutX="9.0" layoutY="606.0" prefHeight="170.0" prefWidth="1403.0"
+                      style="-fx-background-color: rgba(233, 235, 238, 0.7); -fx-background-radius: 10;">
+                    <children>
+                        <!-- JavaFX Button 1 -->
+                        <Button fx:id="button1" layoutX="97.0" layoutY="6.0" onAction="#handleButtonClick1"
+                                prefHeight="94.0" prefWidth="220.0"
+                                style="-fx-background-color: #FAFBFC; -fx-border-color: rgba(10, 0.15, 1, 2); -fx-border-radius: 6px; -fx-text-fill: #24292E;"
+                                text="Видели ли вы что-нибудь необычное?">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Button>
+                        <!-- JavaFX Button 2 -->
+                        <Button fx:id="button2" layoutX="434.0" layoutY="6.0" onAction="#handleButtonClick2"
+                                prefHeight="94.0" prefWidth="177.0"
+                                style="-fx-background-color: #FAFBFC; -fx-border-color: rgba(10, 0.15, 1, 2); -fx-border-radius: 6px; -fx-text-fill: #24292E;"
+                                text="Что вы знаете о господине убитом?">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Button>
+                        <!-- JavaFX Button 3 -->
+                        <Button fx:id="button3" layoutX="752.0" layoutY="6.0" onAction="#handleButtonClick3"
+                                prefHeight="92.0" prefWidth="233.0"
+                                style="-fx-background-color: #FAFBFC; -fx-border-color: rgba(10, 0.15, 1, 2); -fx-border-radius: 6px; -fx-text-fill: #24292E;"
+                                text="Что вы думаете о Эмме Шнайдер?">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Button>
+                        <!-- JavaFX Button 4 -->
+                        <Button fx:id="button4" layoutX="1115.0" layoutY="6.0" onAction="#handleButtonClick4"
+                                prefHeight="93.0" prefWidth="183.0"
+                                style="-fx-background-color: #FAFBFC; -fx-border-color: rgba(10, 0.15, 1, 2); -fx-border-radius: 6px; -fx-text-fill: #24292E;"
+                                text="Что вы думаете о Луизе Штайн?">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+                <Button fx:id="exitButton" layoutX="1225.0" layoutY="25.0" mnemonicParsing="false"
+                        onAction="#handleExitButton" prefHeight="91.0" prefWidth="159.0" text="EXIT">
+                    <font>
+                        <Font size="38.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="onButton" layoutX="1015.0" layoutY="26.0" mnemonicParsing="false"
+                        onAction="#handleOnButton" prefHeight="91.0" prefWidth="159.0" text="ОН">
+                    <font>
+                        <Font size="38.0"/>
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

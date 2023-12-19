@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1412.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inai_bat.controller.FirstHomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1412.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inai_bat.controller.firstMap.FirstHomeController">
 
     <children>
         <ImageView fitHeight="777.0" fitWidth="1413.0">
             <image>
-                <Image url="@1686662716_art-kartinkof-club-p-derevyannii-pol-piksel-art-1.png" />
+                <Image url="@home_background.png" />
             </image>
         </ImageView>
         <Pane prefHeight="782.0" prefWidth="1413.0" style="-fx-background-color: rgba(0, 0, 0, 0.7);">
@@ -45,6 +45,7 @@
                                 <Font size="17.0" />
                             </font>
                         </Button>
+                        <!-- JavaFX Button 4 -->
                         <Button fx:id="button4" layoutX="1115.0" layoutY="6.0" onAction="#handleButtonClick4" prefHeight="93.0" prefWidth="183.0" style="-fx-background-color: #FAFBFC; -fx-border-color: rgba(10, 0.15, 1, 2); -fx-border-radius: 6px; -fx-text-fill: #24292E;" text="Что вы думаете об&#10;Отто Шмидте?">
                             <font>
                                 <Font size="17.0" />

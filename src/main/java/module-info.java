@@ -13,4 +13,6 @@ module com.example.inai_bat {
     exports com.example.inai_bat;
     exports com.example.inai_bat.controller;
     opens com.example.inai_bat.controller to javafx.fxml;
+    exports com.example.inai_bat.controller.firstMap;
+    opens com.example.inai_bat.controller.firstMap to javafx.fxml;
 }
