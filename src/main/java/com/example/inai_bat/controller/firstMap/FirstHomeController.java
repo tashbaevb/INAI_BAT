@@ -9,7 +9,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -21,7 +23,7 @@ public class FirstHomeController implements Initializable {
     TextAnimator textAnimator, textAnimator2, textAnimator3, textAnimator4;
 
     @FXML
-    private Button button1, button2, button3, button4, exitButton;
+    private Button button1, button2, button3, button4, exitButton, onButton;
 
     @FXML
     private Label label;
@@ -59,6 +61,24 @@ public class FirstHomeController implements Initializable {
         Node source = (Node) event.getSource();
         Stage stage = (Stage) source.getScene().getWindow();
         stage.close();
+    }
+
+
+    @FXML
+    void handleOnButton(ActionEvent event) {
+        ButtonType repeatAgain = new ButtonType("Noch ein Mal");
+        Alert alert = new Alert(Alert.AlertType.NONE, "", repeatAgain);
+        alert.setHeaderText(null);
+        alert.setTitle("So schade");
+        alert.setContentText("Sie verloren");
+
+        alert.setOnCloseRequest(e -> {
+
+            GameController.startGame();
+            closeCurrentWindow(event);
+        });
+
+        alert.showAndWait();
     }
 
 

@@ -58,6 +58,12 @@
                         <Font size="38.0" />
                     </font>
                 </Button>
+                <Button fx:id="onButton" layoutX="1015.0" layoutY="26.0" mnemonicParsing="false"
+                        onAction="#handleOnButton" prefHeight="91.0" prefWidth="159.0" text="ОН">
+                    <font>
+                        <Font size="38.0"/>
+                    </font>
+                </Button>
             </children>
         </Pane>
     </children>

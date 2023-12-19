@@ -44,11 +44,11 @@ public class Player extends ImageView {
         else if (code == KeyCode.LEFT) left = true;
         else if (code == KeyCode.RIGHT) right = true;
         else if (code == KeyCode.E) {
-            if (getTranslateX() == 10 && getTranslateY() == 10) {
+            if (getTranslateX() == 0 && getTranslateY() == 0) {
                 openFirstHome();
             } else if (getTranslateX() == 20 && getTranslateY() == 20) {
                 openSecondHome();
-            } else if (getTranslateX() == 0 && getTranslateY() == 0) {
+            } else if (getTranslateX() == 10 && getTranslateY() == 10) {
                 openThirdHome();
             }
         }
