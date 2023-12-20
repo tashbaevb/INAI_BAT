@@ -20,6 +20,11 @@ import java.util.ResourceBundle;
 public class ThirdHomeController implements Initializable {
 
     TextAnimator textAnimator, textAnimator2, textAnimator3, textAnimator4;
+    boolean isButtonClicked = false;
+    boolean isButton1Clicked = false;
+    boolean isButton2Clicked = false;
+    boolean isButton3Clicked = false;
+    boolean isButton4Clicked = false;
 
     @FXML
     private Button button1, button2, button3, button4, exitButton, onButton;
@@ -49,6 +54,14 @@ public class ThirdHomeController implements Initializable {
 
     }
 
+    void resetButtonState() {
+        isButtonClicked = false;
+        button1.setDisable(false);
+        button2.setDisable(false);
+        button3.setDisable(false);
+        button4.setDisable(false);
+    }
+
     @FXML
     void handleExitButton(ActionEvent event) {
         GameController.startGame();
@@ -64,11 +77,11 @@ public class ThirdHomeController implements Initializable {
 
     @FXML
     void handleOnButton(ActionEvent event) {
-        ButtonType goToNextSceneButton = new ButtonType("Go to Next Scene");
-        Alert alert = new Alert(Alert.AlertType.NONE, "", goToNextSceneButton);
+        ButtonType repeatAgain = new ButtonType("Noch ein Mal");
+        Alert alert = new Alert(Alert.AlertType.NONE, "", repeatAgain);
         alert.setHeaderText(null);
-        alert.setTitle("Congratil");
-        alert.setContentText("YOU WON");
+        alert.setTitle("So schade");
+        alert.setContentText("Sie verloren");
 
         alert.setOnCloseRequest(e -> {
 
@@ -82,26 +95,58 @@ public class ThirdHomeController implements Initializable {
 
     @FXML
     void handleButtonClick1(ActionEvent event) {
-        new Thread(textAnimator).start();
-        button1.setDisable(true);
+        if (!isButtonClicked) {
+            if (!isButton1Clicked) {
+                new Thread(() -> {
+                    textAnimator.run();
+                    Platform.runLater(this::resetButtonState);
+                }).start();
+                isButton1Clicked = true;
+                isButtonClicked = true;
+            }
+        }
     }
 
     @FXML
     void handleButtonClick2(ActionEvent event) {
-        new Thread(textAnimator2).start();
-        button2.setDisable(true);
+        if (!isButtonClicked) {
+            if (!isButton2Clicked) {
+                new Thread(() -> {
+                    textAnimator2.run();
+                    Platform.runLater(this::resetButtonState);
+                }).start();
+                isButton2Clicked = true;
+                isButtonClicked = true;
+            }
+        }
     }
 
     @FXML
     void handleButtonClick3(ActionEvent event) {
-        new Thread(textAnimator3).start();
-        button3.setDisable(true);
+        if (!isButtonClicked) {
+            if (!isButton3Clicked) {
+                new Thread(() -> {
+                    textAnimator3.run();
+                    Platform.runLater(this::resetButtonState);
+                }).start();
+                isButton3Clicked = true;
+                isButtonClicked = true;
+            }
+        }
     }
 
     @FXML
     void handleButtonClick4(ActionEvent event) {
-        new Thread(textAnimator4).start();
-        button4.setDisable(true);
+        if (!isButtonClicked) {
+            if (!isButton4Clicked) {
+                new Thread(() -> {
+                    textAnimator4.run();
+                    Platform.runLater(this::resetButtonState);
+                }).start();
+                isButton4Clicked = true;
+                isButtonClicked = true;
+            }
+        }
     }
 }
 

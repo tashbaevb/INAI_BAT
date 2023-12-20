@@ -27,7 +27,8 @@
                 <Font name="Times New Roman" size="29.0"/>
             </font>
         </MenuButton>
-        <Button layoutX="55.0" layoutY="536.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="278.0"
+        <Button fx:id="exitButton" onAction="#handleExitButton" layoutX="55.0" layoutY="536.0" mnemonicParsing="false"
+                prefHeight="50.0" prefWidth="278.0"
                 style="-fx-display: inline-block; -fx-padding: 7px 12px; -fx-border-radius: 10px; -fx-color: #fff; -fx-text-transform: uppercase; -fx-font-size: 24px; -fx-letter-spacing: 0.15em; -fx-transition: all 0.3s; -fx-position: relative; -fx-overflow: hidden; -fx-z-index: 1; -fx-background-color: #0cf; -fx-text-fill: #fff;"
                 styleClass="custom-button" text="RAUS">
             <font>
