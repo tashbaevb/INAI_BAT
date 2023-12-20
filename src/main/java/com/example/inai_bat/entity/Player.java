@@ -51,6 +51,23 @@ public class Player extends ImageView {
             } else if (getTranslateX() == 1330 && getTranslateY() == 580) {
                 openThirdHome();
             }
+        } else if (code == KeyCode.R) {
+            openFirstMenu();
+        }
+    }
+
+    public void openFirstMenu() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/menus/firstMenu.fxml"));
+            Parent parent = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+            ((Stage) getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -68,6 +85,24 @@ public class Player extends ImageView {
             } else if (getTranslateX() == 790 && getTranslateY() == 260) {
                 map2OpenThirdHome();
             }
+        } else if (code == KeyCode.R) {
+            openSecondMenu();
+        }
+    }
+
+
+    public void openSecondMenu() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/menus/secondMenu.fxml"));
+            Parent parent = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+            ((Stage) getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -85,6 +120,24 @@ public class Player extends ImageView {
             } else if (getTranslateX() == 1270 && getTranslateY() == 200) {
                 map3OpenThirdHome();
             }
+        } else if (code == KeyCode.R) {
+            openThirdMenu();
+        }
+    }
+
+
+    public void openThirdMenu() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/menus/thirdMenu.fxml"));
+            Parent parent = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+            ((Stage) getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
