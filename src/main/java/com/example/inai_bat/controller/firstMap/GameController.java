@@ -15,7 +15,7 @@ public class GameController {
 
     public GameController(Stage stage) {
         this.stage = stage;
-        Image backgroundImage = new Image(getClass().getResourceAsStream("/player/map_winter.png"));
+        Image backgroundImage = new Image(getClass().getResourceAsStream("/com/example/inai_bat/images/maps/map_winter.png"));
         Image upStand = new Image(getClass().getResourceAsStream("/player/static.png"));
         Image upLeft = new Image(getClass().getResourceAsStream("/player/up_left.png"));
         Image upRight = new Image(getClass().getResourceAsStream("/player/up_right.png"));

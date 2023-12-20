@@ -15,7 +15,7 @@ public class GameController3 {
 
     public GameController3(Stage stage) {
         this.stage = stage;
-        Image backgroundImage = new Image(getClass().getResourceAsStream("/player/map3.png"));
+        Image backgroundImage = new Image(getClass().getResourceAsStream("/com/example/inai_bat/images/maps/map3.png"));
         Image upStand = new Image(getClass().getResourceAsStream("/player/static.png"));
         Image upLeft = new Image(getClass().getResourceAsStream("/player/up_left.png"));
         Image upRight = new Image(getClass().getResourceAsStream("/player/up_right.png"));
@@ -26,7 +26,7 @@ public class GameController3 {
         Image leftLeft = new Image(getClass().getResourceAsStream("/player/left_left.png"));
         Image leftRight = new Image(getClass().getResourceAsStream("/player/left_right.png"));
 
-        player = new Player(20, 20, upStand, upLeft, upRight, downLeft, downRight, rightLeft, rightRight, leftRight, leftLeft, 650, 450);
+        player = new Player(30, 30, upStand, upLeft, upRight, downLeft, downRight, rightLeft, rightRight, leftRight, leftLeft, 650, 450);
         parallaxBackground = new ParallaxBackground(backgroundImage, player);
 
         Pane pane = new Pane();

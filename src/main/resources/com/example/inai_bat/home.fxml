@@ -16,7 +16,7 @@
     <children>
         <ImageView fitHeight="781.0" fitWidth="1415.0">
             <image>
-                <Image url="@menuImg.png"/>
+                <Image url="@images/menuImg.png"/>
             </image>
         </ImageView>
         <MenuButton fx:id="menuButton" layoutX="55.0" layoutY="440.0" mnemonicParsing="false" prefHeight="50.0"

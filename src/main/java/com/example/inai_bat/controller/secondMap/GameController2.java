@@ -15,7 +15,7 @@ public class GameController2 {
 
     public GameController2(Stage stage) {
         this.stage = stage;
-        Image backgroundImage = new Image(getClass().getResourceAsStream("/player/secondMap.jpg"));
+        Image backgroundImage = new Image(getClass().getResourceAsStream("/com/example/inai_bat/images/maps/secondMap.jpg"));
         Image upStand = new Image(getClass().getResourceAsStream("/player/static.png"));
         Image upLeft = new Image(getClass().getResourceAsStream("/player/up_left.png"));
         Image upRight = new Image(getClass().getResourceAsStream("/player/up_right.png"));

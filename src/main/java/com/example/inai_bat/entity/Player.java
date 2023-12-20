@@ -34,8 +34,8 @@ public class Player extends ImageView {
 
         setTranslateX(x);
         setTranslateY(y);
-        setFitWidth(20);
-        setFitHeight(50);
+        setFitWidth(30);
+        setFitHeight(60);
     }
 
     public void handleKeyPress(KeyCode code) {
@@ -252,7 +252,7 @@ public class Player extends ImageView {
         double maxY = 785;
 
         frameCount++;
-        if (frameCount % 5 == 0) {
+        if (frameCount % 7 == 0) {
 //            printCoordinates();
 
             if (up && getTranslateY() > 0) {
