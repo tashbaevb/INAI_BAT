@@ -20,4 +20,3 @@ public class MainMenuController {
         stage.close();
     }
 }
-

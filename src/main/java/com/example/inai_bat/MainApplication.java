@@ -1,5 +1,6 @@
 package com.example.inai_bat;
 
+import com.example.inai_bat.controller.LoginController;
 import com.example.inai_bat.controller.MainMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,20 +14,18 @@ public class MainApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("mainMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
         Parent root = loader.load();
-        MainMenuController mainMenuController = loader.getController();
+        LoginController loginController = loader.getController();
 
         Scene scene = new Scene(root, 400, 300);
-        primaryStage.setTitle("Главное меню");
+        primaryStage.setTitle("Вход");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
 
 
     public static void main(String[] args) {
         launch(args);
     }
 }
-

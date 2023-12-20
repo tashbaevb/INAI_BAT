@@ -44,11 +44,11 @@ public class Player extends ImageView {
         else if (code == KeyCode.LEFT) left = true;
         else if (code == KeyCode.RIGHT) right = true;
         else if (code == KeyCode.E) {
-            if (getTranslateX() == 0 && getTranslateY() == 0) {
+            if (getTranslateX() == 48 && getTranslateY() == 52) {
                 openFirstHome();
-            } else if (getTranslateX() == 20 && getTranslateY() == 20) {
+            } else if (getTranslateX() == 340 && getTranslateY() == 28) {
                 openSecondHome();
-            } else if (getTranslateX() == 10 && getTranslateY() == 10) {
+            } else if (getTranslateX() == 356 && getTranslateY() == 68) {
                 openThirdHome();
             }
         }
@@ -110,6 +110,9 @@ public class Player extends ImageView {
         else if (code == KeyCode.RIGHT) right = false;
     }
 
+    public void printCoordinates() {
+        System.out.println("X: " + getTranslateX() + ", Y: " + getTranslateY());
+    }
 
     boolean step;
     int frameCount = 0;
@@ -131,6 +134,8 @@ public class Player extends ImageView {
                 setImage(step ? rightLeft : rightRight);
             }
             step = !step;
+
+//            printCoordinates();
         }
     }
 }
