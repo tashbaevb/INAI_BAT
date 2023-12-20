@@ -44,11 +44,11 @@ public class Player extends ImageView {
         else if (code == KeyCode.LEFT) left = true;
         else if (code == KeyCode.RIGHT) right = true;
         else if (code == KeyCode.E) {
-            if (getTranslateX() == 48 && getTranslateY() == 52) {
+            if (getTranslateX() == 170 && getTranslateY() == 460) {
                 openFirstHome();
-            } else if (getTranslateX() == 340 && getTranslateY() == 28) {
+            } else if (getTranslateX() == 1280 && getTranslateY() == 240) {
                 openSecondHome();
-            } else if (getTranslateX() == 356 && getTranslateY() == 68) {
+            } else if (getTranslateX() == 1330 && getTranslateY() == 580) {
                 openThirdHome();
             }
         }
@@ -118,24 +118,27 @@ public class Player extends ImageView {
     int frameCount = 0;
 
     public void move() {
+        double maxX = 1437;
+        double maxY = 785;
+
         frameCount++;
         if (frameCount % 5 == 0) {
+//            printCoordinates();
+
             if (up && getTranslateY() > 0) {
-                setTranslateY(getTranslateY() - 4);
+                setTranslateY(getTranslateY() - 10);
                 setImage(step ? upLeft : upRight);
-            } else if (down && getTranslateY() < maxY - getImage().getHeight()) {
-                setTranslateY(getTranslateY() + 4);
+            } else if (down && getTranslateY() < maxY - 20) {
+                setTranslateY(getTranslateY() + 10);
                 setImage(step ? downLeft : downRight);
             } else if (left && getTranslateX() > 0) {
-                setTranslateX(getTranslateX() - 4);
+                setTranslateX(getTranslateX() - 10);
                 setImage(step ? leftLeft : leftRight);
-            } else if (right && getTranslateX() < maxX - getImage().getWidth()) {
-                setTranslateX(getTranslateX() + 4);
+            } else if (right && getTranslateX() < maxX - 10) {
+                setTranslateX(getTranslateX() + 10);
                 setImage(step ? rightLeft : rightRight);
             }
             step = !step;
-
-//            printCoordinates();
         }
     }
 }

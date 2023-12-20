@@ -33,7 +33,7 @@ public class GameController {
         Pane pane = new Pane();
         pane.getChildren().add(parallaxBackground);
 
-        Scene scene = new Scene(pane, 650, 450);
+        Scene scene = new Scene(pane, 1437, 785);
 
         scene.setOnKeyPressed(e -> player.handleKeyPress(e.getCode()));
         scene.setOnKeyReleased(e -> player.handleKeyRelease(e.getCode()));
@@ -56,6 +56,6 @@ public class GameController {
 
     private void update() {
         player.move();
-        parallaxBackground.update();
+//        parallaxBackground.update();
     }
 }

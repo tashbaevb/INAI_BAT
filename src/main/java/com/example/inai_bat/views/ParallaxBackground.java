@@ -12,14 +12,9 @@ public class ParallaxBackground extends Pane {
     public ParallaxBackground(Image backgroundImage, ImageView player) {
         this.background = new ImageView(backgroundImage);
         this.player = player;
-        background.setFitWidth(1920);
-        background.setFitHeight(1080);
+        background.setFitWidth(1437);
+        background.setFitHeight(785);
 
         getChildren().addAll(background, player);
-    }
-
-    public void update() {
-        background.setTranslateX(player.getTranslateX() * -4);
-        background.setTranslateY(player.getTranslateY() * -11);
     }
 }
