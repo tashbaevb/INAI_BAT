@@ -1,6 +1,5 @@
 package com.example.inai_bat.controller.firstMap;
 
-import com.example.inai_bat.controller.GameController;
 import com.example.inai_bat.service.TextAnimator;
 import com.example.inai_bat.service.TextOutput;
 import javafx.application.Platform;

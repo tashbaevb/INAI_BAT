@@ -102,8 +102,6 @@ public class LoginController {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("home.fxml"));
             Parent root = fxmlLoader.load();
-//            HomeController homeController = fxmlLoader.getController();
-//            homeController.setUserEmail(emailField.getText());
             Scene scene = new Scene(root);
             Stage homeStage = new Stage();
             homeStage.setTitle("Home");

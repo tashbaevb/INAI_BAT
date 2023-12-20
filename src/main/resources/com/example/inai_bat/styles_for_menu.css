@@ -1,0 +1,17 @@
+.root {
+    -fx-background-color: #000000;
+}
+
+.custom-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1);
+}
+
+.custom-button:hover {
+    -fx-background-color: #2980b9;
+}

@@ -1,22 +1,21 @@
-package com.example.inai_bat.controller;
+package com.example.inai_bat.controller.secondMap;
 
 import com.example.inai_bat.entity.Player;
 import com.example.inai_bat.views.ParallaxBackground;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class GameController {
+public class GameController2 {
     private Player player;
     private ParallaxBackground parallaxBackground;
     private Stage stage;
 
-    public GameController(Stage stage) {
+    public GameController2(Stage stage) {
         this.stage = stage;
-        Image backgroundImage = new Image(getClass().getResourceAsStream("/player/map_winter.png"));
+        Image backgroundImage = new Image(getClass().getResourceAsStream("/player/secondMap.jpg"));
         Image upStand = new Image(getClass().getResourceAsStream("/player/static.png"));
         Image upLeft = new Image(getClass().getResourceAsStream("/player/up_left.png"));
         Image upRight = new Image(getClass().getResourceAsStream("/player/up_right.png"));
@@ -35,7 +34,7 @@ public class GameController {
 
         Scene scene = new Scene(pane, 1437, 785);
 
-        scene.setOnKeyPressed(e -> player.handleKeyPress(e.getCode()));
+        scene.setOnKeyPressed(e -> player.handleKeyPress2(e.getCode()));
         scene.setOnKeyReleased(e -> player.handleKeyRelease(e.getCode()));
 
         stage.setScene(scene);
@@ -49,13 +48,12 @@ public class GameController {
         }.start();
     }
 
-    public static void startGame() {
-        Stage gameStage = new Stage();
-        GameController gameController = new GameController(gameStage);
+    public static void startGame2() {
+        Stage stage2 = new Stage();
+        GameController2 gameController2 = new GameController2(stage2);
     }
 
     private void update() {
         player.move();
-//        parallaxBackground.update();
     }
 }

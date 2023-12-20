@@ -1,4 +1,4 @@
-package com.example.inai_bat.controller.firstMap;
+package com.example.inai_bat.controller.secondMap;
 
 import com.example.inai_bat.service.TextAnimator;
 import com.example.inai_bat.service.TextOutput;
@@ -52,7 +52,7 @@ public class FirstHomeController implements Initializable {
 
     @FXML
     void handleExitButton(ActionEvent event) {
-        GameController.startGame();
+        GameController2.startGame2();
         closeCurrentWindow(event);
     }
 
@@ -73,7 +73,7 @@ public class FirstHomeController implements Initializable {
 
         alert.setOnCloseRequest(e -> {
 
-            GameController.startGame();
+            GameController2.startGame2();
             closeCurrentWindow(event);
         });
 
