@@ -1,12 +1,17 @@
 package com.example.inai_bat.entity;
 
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Bounds;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Player extends ImageView {
 
@@ -14,6 +19,8 @@ public class Player extends ImageView {
 
     boolean up, down, left, right;
     double maxX, maxY;
+
+    private List<Bounds> houseBoundsList = new ArrayList<>();
 
     public Player(int x, int y, Image upStand, Image upLeft, Image upRight, Image downLeft, Image downRight,
                   Image rightLeft, Image rightRight, Image leftRight, Image leftLeft, double maxX, double maxY) {
@@ -31,6 +38,9 @@ public class Player extends ImageView {
         this.maxY = maxY;
 
         currentImage = upStand;
+
+        houseBoundsList.add(new Rectangle(60, 367, 160, 85).getBoundsInLocal());
+        houseBoundsList.add(new Rectangle(1190, 165, 130, 55).getBoundsInLocal());
 
         setTranslateX(x);
         setTranslateY(y);
@@ -308,20 +318,35 @@ public class Player extends ImageView {
         if (frameCount % 7 == 0) {
 //            printCoordinates();
 
-            if (up && getTranslateY() > 0) {
+            if (up && getTranslateY() > 0 && !checkCollision(0, -10)) {
                 setTranslateY(getTranslateY() - 10);
                 setImage(step ? upLeft : upRight);
-            } else if (down && getTranslateY() < maxY - 20) {
+            } else if (down && getTranslateY() < maxY - 20 && !checkCollision(0, 10)) {
                 setTranslateY(getTranslateY() + 10);
                 setImage(step ? downLeft : downRight);
-            } else if (left && getTranslateX() > 0) {
+            } else if (left && getTranslateX() > 0 && !checkCollision(-10, 0)) {
                 setTranslateX(getTranslateX() - 10);
                 setImage(step ? leftLeft : leftRight);
-            } else if (right && getTranslateX() < maxX - 10) {
+            } else if (right && getTranslateX() < maxX - 10 && !checkCollision(10, 0)) {
                 setTranslateX(getTranslateX() + 10);
                 setImage(step ? rightLeft : rightRight);
             }
             step = !step;
         }
+    }
+
+    private boolean checkCollision(double deltaX, double deltaY) {
+        double newX = getTranslateX() + deltaX;
+        double newY = getTranslateY() + deltaY;
+
+        Bounds playerBounds = new Rectangle(newX, newY, 30, 60).getBoundsInParent();
+
+        for (Bounds houseBounds : houseBoundsList) {
+            if (playerBounds.intersects(houseBounds)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
