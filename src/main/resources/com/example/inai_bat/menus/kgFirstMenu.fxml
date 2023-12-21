@@ -10,7 +10,7 @@
 <?import java.net.URL?>
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="1437.0"
             xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.inai_bat.controller.pauseMenu.FirstMenuController">
+            fx:controller="com.example.inai_bat.kgController.pauseMenu.FirstMenuController">
     <stylesheets>
         <URL value="@../styles_for_menu.css"/>
     </stylesheets>
@@ -22,13 +22,13 @@
             </image>
         </ImageView>
         <Button fx:id="submitButton" defaultButton="true" layoutX="594.0" layoutY="297.0" onAction="#play"
-                prefHeight="80.0" prefWidth="250.0" styleClass="custom-button" text="PLAY" textFill="WHITE">
+                prefHeight="80.0" prefWidth="250.0" styleClass="custom-button" text="ОЮН" textFill="WHITE">
             <font>
                 <Font size="25.0"/>
             </font>
         </Button>
         <Button layoutX="594.0" layoutY="448.0" onAction="#exitToMenu" prefHeight="80.0" prefWidth="250.0"
-                styleClass="custom-button" text="EXIT" textFill="WHITE">
+                styleClass="custom-button" text="ЧЫГУУ" textFill="WHITE">
             <font>
                 <Font size="25.0"/>
             </font>

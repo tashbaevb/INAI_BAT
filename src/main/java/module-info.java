@@ -11,8 +11,14 @@ module com.example.inai_bat {
     requires org.kordamp.bootstrapfx.core;
 
     opens com.example.inai_bat to javafx.fxml;
+    opens com.example.inai_bat.kgController.firstMap;
+    opens com.example.inai_bat.kgController.pauseMenu;
+    opens com.example.inai_bat.kgController.secondMap;
+
+
     exports com.example.inai_bat;
     exports com.example.inai_bat.controller;
+    exports com.example.inai_bat.kgController.firstMap;
     opens com.example.inai_bat.controller to javafx.fxml;
     exports com.example.inai_bat.controller.firstMap;
     opens com.example.inai_bat.controller.firstMap to javafx.fxml;
@@ -20,4 +26,8 @@ module com.example.inai_bat {
     opens com.example.inai_bat.controller.secondMap to javafx.fxml;
     exports com.example.inai_bat.controller.thirdMap;
     opens com.example.inai_bat.controller.thirdMap to javafx.fxml;
+    exports com.example.inai_bat.controller.pauseMenu;
+    opens com.example.inai_bat.controller.pauseMenu to javafx.fxml;
+    exports com.example.inai_bat.kgController;
+    opens com.example.inai_bat.kgController to javafx.fxml;
 }

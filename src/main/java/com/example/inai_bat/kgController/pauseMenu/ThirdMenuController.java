@@ -1,7 +1,7 @@
-package com.example.inai_bat.controller;
+package com.example.inai_bat.kgController.pauseMenu;
 
 import com.example.inai_bat.MainApplication;
-import com.example.inai_bat.controller.firstMap.GameController;
+import com.example.inai_bat.kgController.thirdMap.GameController3;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,11 +12,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class FirstMenuController {
+public class ThirdMenuController {
 
     @FXML
     void play(ActionEvent event) {
-        GameController.startGame();
+        GameController3.startGame3();
         closeCurrentWindow(event);
     }
 

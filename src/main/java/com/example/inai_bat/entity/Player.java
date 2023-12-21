@@ -169,7 +169,7 @@ public class Player extends ImageView {
 
     public void map3OpenSecondHome() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/thirdMap/firstHome.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/thirdMap/secondHome.fxml"));
             Parent parent = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
 
@@ -185,7 +185,7 @@ public class Player extends ImageView {
 
     public void map3OpenThirdHome() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/thirdMap/firstHome.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/thirdMap/thirdHome.fxml"));
             Parent parent = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
 
@@ -217,7 +217,7 @@ public class Player extends ImageView {
 
     public void map2OpenSecondHome() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/firstHome.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/secondHome.fxml"));
             Parent parent = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
 
@@ -233,7 +233,7 @@ public class Player extends ImageView {
 
     public void map2OpenThirdHome() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/firstHome.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/thirdHome.fxml"));
             Parent parent = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
 
@@ -318,16 +318,16 @@ public class Player extends ImageView {
         if (frameCount % 7 == 0) {
 //            printCoordinates();
 
-            if (up && getTranslateY() > 0 && !checkCollision(0, -10)) {
+            if (up && getTranslateY() > 0 ) {
                 setTranslateY(getTranslateY() - 10);
                 setImage(step ? upLeft : upRight);
-            } else if (down && getTranslateY() < maxY - 20 && !checkCollision(0, 10)) {
+            } else if (down && getTranslateY() < maxY - 20) {
                 setTranslateY(getTranslateY() + 10);
                 setImage(step ? downLeft : downRight);
-            } else if (left && getTranslateX() > 0 && !checkCollision(-10, 0)) {
+            } else if (left && getTranslateX() > 0) {
                 setTranslateX(getTranslateX() - 10);
                 setImage(step ? leftLeft : leftRight);
-            } else if (right && getTranslateX() < maxX - 10 && !checkCollision(10, 0)) {
+            } else if (right && getTranslateX() < maxX - 10 ) {
                 setTranslateX(getTranslateX() + 10);
                 setImage(step ? rightLeft : rightRight);
             }

@@ -10,7 +10,7 @@
 <?import java.net.URL?>
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="1437.0"
             xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.inai_bat.controller.ThirdMenuController">
+            fx:controller="com.example.inai_bat.controller.pauseMenu.ThirdMenuController">
     <stylesheets>
         <URL value="@../styles_for_menu.css"/>
     </stylesheets>
