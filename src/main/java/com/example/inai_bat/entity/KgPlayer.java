@@ -113,7 +113,7 @@ public class KgPlayer extends Player{
                 kgMap2OpenThirdHome();
             }
         } else if (code == KeyCode.R) {
-            openSecondMenu();
+            kgOpenSecondMenu();
         }
     }
 
@@ -153,6 +153,22 @@ public class KgPlayer extends Player{
     public void kgMap2OpenThirdHome() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/kg/thirdHome.fxml"));
+            Parent parent = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+            ((Stage) getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void kgOpenSecondMenu() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/menus/kgSecondMenu.fxml"));
             Parent parent = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
 

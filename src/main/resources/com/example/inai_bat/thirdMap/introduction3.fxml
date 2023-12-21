@@ -5,15 +5,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="777.0" prefWidth="1437.0" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inai_bat.controller.thirdMap.Introduction3Controller">
+<AnchorPane prefHeight="785.0" prefWidth="1437.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.inai_bat.controller.thirdMap.Introduction3Controller">
     <children>
-        <ImageView fitHeight="777.0" fitWidth="1437.0">
+        <ImageView fitHeight="785.0" fitWidth="1437.0">
             <image>
                 <Image url="@../images/3map.png"/>
             </image>
         </ImageView>
-        <StackPane layoutX="235.0" layoutY="121.0" prefHeight="536.0" prefWidth="1151.0"
+        <StackPane layoutX="145.0" layoutY="121.0" prefHeight="536.0" prefWidth="1151.0"
                    style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 70;">
             <!-- Затемненное место с прозрачностью 0.5 -->
             <children>
@@ -26,7 +27,7 @@
                 </Text>
             </children>
         </StackPane>
-        <Button fx:id="playButton" onAction="#handlePlayButton" layoutX="720.0" layoutY="666.0"
+        <Button fx:id="playButton" layoutX="630.0" layoutY="666.0" onAction="#handlePlayButton"
                 style="-fx-font-size: 20; -fx-padding: 10 20; -fx-background-color: #FFFFFF; -fx-text-fill: #7ec5e7; -fx-background-radius: 15;"
                 text="Переход к игре"/>
     </children>

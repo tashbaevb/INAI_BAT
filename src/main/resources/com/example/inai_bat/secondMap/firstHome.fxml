@@ -15,7 +15,7 @@
     <children>
         <ImageView fitHeight="794.0" fitWidth="1412.0">
             <image>
-                <Image url="@../images/zaeb/1620671340_71-p-interer-russkoi-izbi-foto-73.jpg"/>
+                <Image url="@../images/characters/1620671340_71-p-interer-russkoi-izbi-foto-73.jpg"/>
             </image>
         </ImageView>
         <Pane prefHeight="797.0" prefWidth="1416.0" style="-fx-background-color: rgba(0, 0, 0, 0.6);">
@@ -83,7 +83,7 @@
         </Label>
         <ImageView fitHeight="309.0" fitWidth="247.0" layoutX="1180.0" layoutY="503.0">
             <image>
-                <Image url="@../images/zaeb/char12.png"/>
+                <Image url="@../images/characters/char12.png"/>
             </image>
         </ImageView>
     </children>

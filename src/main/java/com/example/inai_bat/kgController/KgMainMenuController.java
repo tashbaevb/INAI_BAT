@@ -56,7 +56,7 @@ public class KgMainMenuController {
     @FXML
     private void handlePlayButton2(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/kg/introduction.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/kg/introduction2.fxml"));
             Parent parent = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
 
@@ -73,7 +73,7 @@ public class KgMainMenuController {
     @FXML
     private void handlePlayButton3(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/kg/introduction.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/thirdMap/introduction3.fxml"));
             Parent parent = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
 

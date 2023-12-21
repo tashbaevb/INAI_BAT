@@ -30,7 +30,7 @@ public class SecondMenuController {
     @FXML
     private void exitToMenu(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("home.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/kgHome.fxml"));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             Stage homeStage = new Stage();

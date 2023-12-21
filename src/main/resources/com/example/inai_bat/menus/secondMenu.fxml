@@ -18,7 +18,7 @@
         <MediaView fitHeight="785.0" fitWidth="1437.0"/>
         <ImageView fitHeight="785.0" fitWidth="1448.0" layoutX="-7.0" layoutY="-2.0">
             <image>
-                <Image url="@secondMenuImg.jpg"/>
+                <Image url="@../images/menus/secondMenuImg.jpg"/>
             </image>
         </ImageView>
         <Button fx:id="submitButton" defaultButton="true" layoutX="594.0" layoutY="297.0" onAction="#play"
