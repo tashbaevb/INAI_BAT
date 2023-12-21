@@ -76,11 +76,11 @@ public class ThirdHomeController implements Initializable {
 
     @FXML
     void handleOnButton(ActionEvent event) {
-        ButtonType repeatAgain = new ButtonType("Noch ein Mal");
+        ButtonType repeatAgain = new ButtonType("Дагы бир жолу");
         Alert alert = new Alert(Alert.AlertType.NONE, "", repeatAgain);
         alert.setHeaderText(null);
-        alert.setTitle("So schade");
-        alert.setContentText("Sie verloren");
+        alert.setTitle("Уят");
+        alert.setContentText("Туура эмес");
 
         alert.setOnCloseRequest(e -> {
 

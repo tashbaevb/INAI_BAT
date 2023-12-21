@@ -80,8 +80,8 @@ public class ThirdHomeController implements Initializable {
         ButtonType repeatAgain = new ButtonType("Noch ein Mal");
         Alert alert = new Alert(Alert.AlertType.NONE, "", repeatAgain);
         alert.setHeaderText(null);
-        alert.setTitle("So schade");
-        alert.setContentText("Sie verloren");
+        alert.setTitle("Yahoo");
+        alert.setContentText("Sie gewonnen");
 
         alert.setOnCloseRequest(e -> {
 

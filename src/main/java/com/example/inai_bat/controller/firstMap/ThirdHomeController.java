@@ -43,13 +43,13 @@ public class ThirdHomeController implements Initializable {
             }
         };
 
-        textAnimator = new TextAnimator("Отто, медленно кивая, отвечает: \"Нет, детектив, в тот вечер было все так же тихо и спокойно, как обычно. Ничего не выходящего из обыденности я не запомнил. Кроме одной детали, вчера вечером Фрау Луиза очень долго стояла у двери у господина убитого.\"",
+        textAnimator = new TextAnimator("Otto antwortet langsam nickend: „Nein, Detektiv, an diesem Abend war alles so ruhig und gelassen wie immer. Ich konnte mich an nichts Ungewöhnliches erinnern. Bis auf ein Detail stand Frau Louise letzte Nacht sehr lange da.“ die Tür des Herrn getötet.“",
                 0.2, textOutput);
-        textAnimator2 = new TextAnimator("\"Леонид был талантливым художником, и я часто бывал у него в студии. У нас были приятные разговоры о прошлом деревни. Он был мистическим, как и его картины, но никаких конфликтов между нами не возникало. Всегда казалось, что мы понимаем друг друга.\"",
+        textAnimator2 = new TextAnimator("„Leonid war ein talentierter Künstler, und ich besuchte oft sein Atelier. Wir führten angenehme Gespräche über die Vergangenheit des Dorfes. Er war mystisch, wie seine Bilder, aber zwischen uns kam es zu keinen Konflikten. Es schien immer, als hätten wir uns verstanden.“",
                 0.2, textOutput);
-        textAnimator3 = new TextAnimator("Отто, думая, отвечает: \"С Эммой мы хорошие знакомые. Я часто бываю в ее магазине, и она была для меня источником интересных антиквариатов и занимательных рассказов. Мы никогда не имели разногласий, всегда общались дружелюбно.\"",
+        textAnimator3 = new TextAnimator("Otto denkt nach und antwortet: \"Emma und ich sind gute Bekannte. Ich besuche ihren Laden, und sie ist für mich eine Quelle für interessante Antiquitäten und unterhaltsame Geschichten. Wir hatten noch nie eine Meinungsverschiedenheit und haben uns immer freundlich unterhalten.",
                 0.2, textOutput);
-        textAnimator4 = new TextAnimator("Отто улыбается: \"Луиза - молодой души человек. Ее энтузиазм за фотографию заразителен. Мы не очень близки, но иногда бываю в библиотеке, где она исследует свои творческие проекты. Она приносит свежий взгляд на нашу тихую деревню.\"",
+        textAnimator4 = new TextAnimator("Otto lächelt: \"Louise ist eine junge Seele. Ihre Begeisterung für die Fotografie ist ansteckend. Wir stehen uns nicht sehr nahe, aber manchmal besuche ich die Bibliothek, wo sie ihre kreativen Projekte erforscht. Sie bringt eine neue Perspektive in unser ruhiges Dorf.\"",
                 0.2, textOutput);
 
     }

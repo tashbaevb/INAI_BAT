@@ -42,13 +42,13 @@ public class SecondHomeController implements Initializable {
             }
         };
 
-        textAnimator = new TextAnimator("\"В тот вечер я, действительно, проводила время в лесу, пытаясь запечатлеть красоту заката. Это была моя попытка поймать в кадр момент, когда звезды начинают пробуждаться на небесах. Но, к сожалению, мое внимание было полностью поглощено работой, и я не заметила ничего необычного или подозрительного вокруг.\"",
+        textAnimator = new TextAnimator("„An diesem Abend verbrachte ich tatsächlich Zeit im Wald und versuchte, die Schönheit des Sonnenuntergangs einzufangen. Es war mein Versuch, den Moment einzufangen, in dem die Sterne am Himmel zu erwachen beginnen. Aber leider war meine Aufmerksamkeit völlig in die Arbeit vertieft , und ich habe in der Umgebung nichts Ungewöhnliches oder Verdächtiges bemerkt.“",
                 0.2, textOutput);
-        textAnimator2 = new TextAnimator("\"Что касается господина Краузе, то мы не общались особо много, но каждая встреча с ним была приятной. Он был талантливым художником, чьи картины заставляли задуматься. Но я не могу сказать, что знала его личностно.\"",
+        textAnimator2 = new TextAnimator("„Was Herrn Krause betrifft, wir haben nicht viel miteinander gesprochen, aber jedes Treffen mit ihm war angenehm. Er war ein talentierter Künstler, dessen Bilder einen zum Nachdenken anregten. Ich kann aber nicht sagen, dass ich ihn persönlich gekannt habe.“",
                 0.2, textOutput);
-        textAnimator3 = new TextAnimator("\"Относительно Эммы Шнайдер, она, конечно, талантливая торговка, но наши интересы различны. Я не часто захожу в антикварные магазины, хотя в ее магазине я бывала пару раз. Никаких неприятных моментов у нас не было.\"",
+        textAnimator3 = new TextAnimator("„Emma Schneider ist natürlich eine talentierte Handwerkerin, aber unsere Interessen sind unterschiedlich. Ich gehe nicht oft in Antiquitätengeschäfte, obwohl ich schon ein paar Mal in ihrem Geschäft war. Uns hat es nichts Unangenehmes gegeben.“ Momente.“",
                 0.2, textOutput);
-        textAnimator4 = new TextAnimator("\"А вот с господином Шмидтом у меня несколько больше общего. Я часто захожу в библиотеку, где он рассказывает интересные истории о прошлом деревни. Он образованный человек, и его рассказы всегда приносят что-то новое.\"",
+        textAnimator4 = new TextAnimator("„Mit Herrn Schmidt verbindet mich aber noch etwas mehr. Ich gehe oft in die Bibliothek, wo er interessante Geschichten über die Vergangenheit des Dorfes erzählt. Er ist ein gebildeter Mann, und seine Geschichten bringen immer etwas Neues.“",
                 0.2, textOutput);
 
     }
@@ -139,7 +139,7 @@ public class SecondHomeController implements Initializable {
     void handleButtonClick4(ActionEvent event) {
         if (!isButtonClicked) {
             if (!isButton4Clicked) {
-                new Thread(() ->{
+                new Thread(() -> {
                     textAnimator4.run();
                     Platform.runLater(this::resetButtonState);
                 }).start();

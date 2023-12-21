@@ -57,7 +57,7 @@
                 <Button fx:id="button4" layoutX="61.0" layoutY="354.0" onAction="#handleButtonClick4" prefHeight="50.0"
                         prefWidth="286.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="Отто Шмидт жөнүндө кандай ойдосуз?">
+                        text="Луиза Штайн жөнүндө кандай ойдосуз?">
                     <font>
                         <Font size="17.0"/>
                     </font>
@@ -79,8 +79,14 @@
         </Pane>
         <Label fx:id="label" layoutX="60.0" layoutY="488.0" prefHeight="286.0" prefWidth="1050.0"
                style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-padding: 10; -fx-border-color: #000000; -fx-border-width: 5; -fx-background-radius: 50;"
-               text="&quot;Ошол күнү кечке келсек, күн жарык болуп турганда, мен ал жерде бир нече саат өткөрдүм. Менин токойдо болгон убактым абдан катуу болду жана мен айылдын башка аймактарында же ага жакын аймактарда болгон эмесмин. Кайтып келгенде дароо үйүмө бардым.&quot;&quot;Мен сизге сертификат бере аламбы? Балким ошол түнү тарткан сүрөттөрүм? Мен ар бир көз ирмемди сүрөткө тартууга аракет кылам жана бул менин кайсы бир убакта кайсы жерде болгонума далил боло алат.&quot;"
+               text="'Ошол кечти үйүмдө китеп окуу менен өткөрдүм. Бул күнүмдүк кечтен эч кандай четтеп кеткеним эсимде жок. Эгер кошумча далил керек болсо, ошол күнү кечинде мени көргөн же үйдө экенимди уккан кошуналардан далил келтире алам'."
                textFill="WHITE" wrapText="true">
+            <font>
+                <Font size="29.0"/>
+            </font>
+        </Label>
+        <Label fx:id="label1" layoutX="1190.0" layoutY="365.0" prefHeight="125.0" prefWidth="204.0"
+               style="-fx-text-fill: WHITE;" text="Отто Шмидт" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
                 <Font size="29.0"/>
             </font>

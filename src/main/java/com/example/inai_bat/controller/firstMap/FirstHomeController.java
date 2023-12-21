@@ -42,13 +42,13 @@ public class FirstHomeController implements Initializable {
             }
         };
 
-        textAnimator = new TextAnimator("Эмма, всматриваясь в глаза детектива, отвечает: \"Нет, этот вечер был как и любой другой. В деревне всегда так тихо, особенно после закрытия магазинов. Я не заметила ничего необычного. Хотя, подождите, за день до этого Луиза Штайн приобрела Гладиус солдата IV Галльского легиона\"",
+        textAnimator = new TextAnimator("Emma blickt dem Detektiv in die Augen und antwortet: „Nein, dieser Abend war wie jeder andere. Im Dorf ist es immer so ruhig, besonders nach Ladenschluss. Mir ist nichts Ungewöhnliches aufgefallen. Obwohl, warte, das Am Tag zuvor erwarb Louise Stein einen Gladius-Soldaten der IV. Gallischen Legion.",
                 0.2, textOutput);
-        textAnimator2 = new TextAnimator("Эмма медленно кивает, словно она перебирает в памяти множество деталей: \"Леонид был талантливым художником. Мы общались, конечно, особенно когда ему нужны были антикварные предметы для его работ. Он был постоянным клиентом моего магазина. Но никаких конфликтов или разногласий между нами не было. Я уважала его творческий взгляд, как и он, вероятно, уважал мою коллекцию.\"",
+        textAnimator2 = new TextAnimator("Emma nickt langsam, als würde sie viele Details in ihrer Erinnerung durchgehen: „Leonid war ein talentierter Künstler. Wir haben natürlich kommuniziert, besonders als er antike Gegenstände für seine Werke brauchte. Er war Stammkunde meines Ladens. Aber da Es gab keine Konflikte oder Meinungsverschiedenheiten zwischen uns. „Ich habe seine kreative Vision respektiert, genauso wie er wahrscheinlich meine Sammlung respektiert hat.“",
                 0.2, textOutput);
-        textAnimator3 = new TextAnimator("Эмма, снова медленно обдумывая вопрос, отвечает: \"Луиза - молодая девушка, и я уважаю ее страсть к фотографии. Нам не часто приходилось пересекаться, но она бывала в моем магазине, и мы иногда обменивались несколькими словами. Ничего необычного в ее поведении или отношениях со мной я не замечала.\"",
+        textAnimator3 = new TextAnimator("Emma, \u200B\u200B\u200B\u200Bwieder langsam über die Frage nachdenkend, antwortet: „Louise ist ein junges Mädchen und ich respektiere ihre Leidenschaft für die Fotografie. Wir haben uns nicht oft getroffen, aber sie war in meinem Laden und wir haben manchmal ein paar Worte gewechselt. Nichts Ungewöhnliches.“ in ihrem Verhalten oder ihrer Einstellung. „Ich habe es bei mir nicht gemerkt.“",
                 0.2, textOutput);
-        textAnimator4 = new TextAnimator("Эмма, с тенью размышлений в глазах, отвечает: \"Отто всегда был добрым соседом. Мы действительно общались, делясь воспоминаниями о прошлом, и он иногда заглядывал ко мне в магазин. Но я не могу представить себе, чтобы он мог совершить что-то подобное. Он всегда казался таким мирным и дружелюбным.\"",
+        textAnimator4 = new TextAnimator("Emma, \u200B\u200B\u200B\u200Bwieder langsam über die Frage nachdenkend, antwortet: „Louise ist ein junges Mädchen und ich respektiere ihre Leidenschaft für die Fotografie. Wir haben uns nicht oft getroffen, aber sie war in meinem Laden und wir haben manchmal ein paar Worte gewechselt. Nichts Ungewöhnliches.“ in ihrem Verhalten oder ihrer Einstellung. „Ich habe es bei mir nicht gemerkt.“",
                 0.2, textOutput);
 
     }

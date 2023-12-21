@@ -77,11 +77,11 @@ public class SecondHomeController implements Initializable {
 
     @FXML
     void handleOnButton(ActionEvent event) {
-        ButtonType goToNextSceneButton = new ButtonType("Go to Next Scene");
+        ButtonType goToNextSceneButton = new ButtonType("Кеттик");
         Alert alert = new Alert(Alert.AlertType.NONE, "", goToNextSceneButton);
         alert.setHeaderText(null);
-        alert.setTitle("Congratil");
-        alert.setContentText("YOU WON");
+        alert.setTitle("Куттуктайбыз");
+        alert.setContentText("Сиз уттунуз");
 
         alert.setOnCloseRequest(e -> {
 

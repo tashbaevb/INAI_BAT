@@ -48,7 +48,7 @@
                 <Button fx:id="button3" layoutX="61.0" layoutY="367.0" onAction="#handleButtonClick3" prefHeight="50.0"
                         prefWidth="287.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="Эмма Шнайдер жөнүндө кандай ойдосуз?">
+                        text="Луиза Шнайдер жөнүндө кандай ойдосуз?">
                     <font>
                         <Font size="17.0"/>
                     </font>
@@ -79,8 +79,15 @@
         </Pane>
         <Label fx:id="label" layoutX="20.0" layoutY="528.0" prefHeight="266.0" prefWidth="1170.0"
                style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-padding: 10; -fx-border-color: #000000; -fx-border-width: 5; -fx-background-radius: 50;"
-               text="&quot;Ошол күнү кечке келсек, күн жарык болуп турганда, мен ал жерде бир нече саат өткөрдүм. Менин токойдо болгон убактым абдан катуу болду жана мен айылдын башка аймактарында же ага жакын аймактарда болгон эмесмин. Кайтып келгенде дароо үйүмө бардым.&quot;&quot;Мен сизге сертификат бере аламбы? Балким ошол түнү тарткан сүрөттөрүм? Мен ар бир көз ирмемди сүрөткө тартууга аракет кылам жана бул менин кайсы бир убакта кайсы жерде болгонума далил боло алат.&quot;"
+               text="Эмма Шнайдер, анын боз көздөрү катып калган. 'Киши өлтүрүлгөн күнү кечинде дүкөндө болгом. Мен сейрек кездешүүчү күзгү алдым, алар келип чыгышын талкуулашты. Жеткирүүчү кетип калды, мен калдым. Кызматкерлер жана камералар тастыкташат. Леониддин өлтүрүлүшү трагедия, мен өкүнөм. Баары биздин тынч бурчубузда болот'."
                textFill="WHITE" wrapText="true">
+            <font>
+                <Font size="29.0"/>
+            </font>
+        </Label>
+        <Label fx:id="label1" layoutX="1190.0" layoutY="365.0" prefHeight="125.0" prefWidth="204.0"
+               style="-fx-text-fill: WHITE;" text="Эмма Шнайдер" textAlignment="CENTER" textFill="WHITE"
+               wrapText="true">
             <font>
                 <Font size="29.0"/>
             </font>

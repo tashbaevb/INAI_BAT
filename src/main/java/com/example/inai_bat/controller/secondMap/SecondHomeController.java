@@ -80,8 +80,8 @@ public class SecondHomeController implements Initializable {
         ButtonType goToNextSceneButton = new ButtonType("Go to Next Scene");
         Alert alert = new Alert(Alert.AlertType.NONE, "", goToNextSceneButton);
         alert.setHeaderText(null);
-        alert.setTitle("Congratil");
-        alert.setContentText("YOU WON");
+        alert.setTitle("Yahoo!");
+        alert.setContentText("Sie gewonnen");
 
         alert.setOnCloseRequest(e -> {
 
