@@ -38,20 +38,54 @@ public class MainMenuController {
 
     @FXML
     private void handlePlayButton(ActionEvent event) {
-        GameController.startGame();
-        closeCurrentWindow(menuButton);
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/introduction.fxml"));
+            Parent parent = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+            Stage currentStage = (Stage) menuButton.getScene().getWindow();
+            currentStage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     private void handlePlayButton2(ActionEvent event) {
-        GameController2.startGame2();
-        closeCurrentWindow(menuButton);
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/introduction2.fxml"));
+            Parent parent = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+            Stage currentStage = (Stage) menuButton.getScene().getWindow();
+            currentStage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     private void handlePlayButton3(ActionEvent event) {
-        GameController3.startGame3();
-        closeCurrentWindow(menuButton);
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/thirdMap/introduction3.fxml"));
+            Parent parent = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+
+            stage.setScene(new Scene(parent));
+            stage.show();
+
+            Stage currentStage = (Stage) menuButton.getScene().getWindow();
+            currentStage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -75,12 +109,5 @@ public class MainMenuController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-
-
-    private void closeCurrentWindow(Node source) {
-        Stage stage = (Stage) source.getScene().getWindow();
-        stage.close();
     }
 }

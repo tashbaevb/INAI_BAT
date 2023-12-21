@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="777.0" prefWidth="1437.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.inai_bat.controller.firstMap.IntroductionController">
+    <children>
+        <ImageView fitHeight="777.0" fitWidth="1437.0">
+            <image>
+                <Image url="@../images/1map.jpg"/>
+            </image>
+        </ImageView>
+        <StackPane layoutX="235.0" layoutY="121.0" prefHeight="536.0" prefWidth="1151.0"
+                   style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 70;">
+            <!-- Затемненное место с прозрачностью 0.5 -->
+            <children>
+                <Text fill="WHITE" style="-fx-background-radius: 0.5;"
+                      text="Детектив Карл Шпайхер, стремящийся отдохнуть от городской суеты, оказывается в таинственной деревне, где спокойствие и тишина маскируют темные тайны. Эмма Шнайдер, Леонид Краузе, Луиза Штайн и Отто Шмидт – загадочные соседи с тайнами в своих прошлых. Убийство Леонида в его студии ставит под подозрение всех, включая Эмму, Луизу и Отто. В этой деревне, где шепчет прошлое, и в темноте ночи таится разгадка, детектив Карл Шпайхер сталкивается с вызовом, который может разрушить не только его покой, но и спокойствие всего этого загадочного уголка мира."
+                      textAlignment="CENTER" wrappingWidth="1081.0">
+                    <font>
+                        <Font size="29.0"/>
+                    </font>
+                </Text>
+            </children>
+        </StackPane>
+        <Button fx:id="playButton" onAction="#handlePlayButton" layoutX="720.0" layoutY="666.0"
+                style="-fx-font-size: 20; -fx-padding: 10 20; -fx-background-color: #FFFFFF; -fx-text-fill: #7ec5e7; -fx-background-radius: 15;"
+                text="Переход к игре"/>
+    </children>
+</AnchorPane>
