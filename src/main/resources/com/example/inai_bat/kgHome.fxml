@@ -36,16 +36,18 @@
             </font>
         </Button>
 
-        <ImageView fitHeight="56.0" fitWidth="62.0" layoutX="1358.0" layoutY="24.0" pickOnBounds="true"
-                   preserveRatio="true">
-            <image>
-                <Image url="@images/logout.png"/>
-            </image>
-        </ImageView>
+        <Button fx:id="kgButton" layoutX="1230.0" layoutY="28.0" mnemonicParsing="false"
+                 prefHeight="36.0" prefWidth="83.0"
+                 style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #000000; -fx-font-size: 29.0;"
+                 text="КГ" textFill="WHITE">
+        <font>
+            <Font name="Times New Roman" size="29.0"/>
+        </font>
+    </Button>
 
-        <Button fx:id="deButton" layoutX="1120.0" layoutY="28.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="120.0" onAction="#handleDEButton"
+        <Button layoutX="1120.0" layoutY="28.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="83.0"
                 style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #000000; -fx-font-size: 29.0;"
-                text="Нем">
+                text="НЕ" textFill="WHITE">
             <font>
                 <Font name="Times New Roman" size="29.0"/>
             </font>

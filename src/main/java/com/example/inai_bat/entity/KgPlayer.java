@@ -7,7 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
-public class KgPlayer extends Player{
+public class KgPlayer extends Player {
 
     public KgPlayer(int x, int y, Image upStand, Image upLeft, Image upRight, Image downLeft, Image downRight,
                     Image rightLeft, Image rightRight, Image leftRight, Image leftLeft, double maxX, double maxY) {
@@ -33,71 +33,6 @@ public class KgPlayer extends Player{
         }
     }
 
-
-    public void kgOpenFirstHome() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/kg/firstHome.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            ((Stage) getScene().getWindow()).close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    public void kgOpenSecondHome() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/kg/secondHome.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            ((Stage) getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    public void kgOpenThirdHome() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/kg/thirdHome.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            ((Stage) getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void kgOpenFirstMenu() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/menus/kgFirstMenu.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            ((Stage) getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
     @Override
     public void handleKeyPress2(KeyCode code) {
         if (code == KeyCode.UP) up = true;
@@ -118,10 +53,10 @@ public class KgPlayer extends Player{
     }
 
 
-    public void kgMap2OpenFirstHome() {
+    private void open(String path) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/kg/firstHome.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(path));
+            Parent parent = fxmlLoader.load();
             Stage stage = new Stage();
 
             stage.setScene(new Scene(parent));
@@ -133,55 +68,46 @@ public class KgPlayer extends Player{
         }
     }
 
+    public void openMenu(int map) {
+        open("/com/example/inai_bat/menus/kgMenu" + map + ".fxml");
+    }
 
-    public void kgMap2OpenSecondHome() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/kg/secondHome.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            ((Stage) getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void openHome(int map, int home) {
+        open("/com/example/inai_bat/map" + map + "/kg/kgHome" + home + ".fxml");
     }
 
 
-    public void kgMap2OpenThirdHome() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/kg/thirdHome.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            ((Stage) getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void kgOpenFirstMenu() {
+        openMenu(1);
     }
-
 
     public void kgOpenSecondMenu() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/menus/kgSecondMenu.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            ((Stage) getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        openMenu(2);
     }
 
 
+    public void kgOpenFirstHome() {
+        openHome(1, 1);
+    }
+
+    public void kgOpenSecondHome() {
+        openHome(1, 2);
+    }
+
+    public void kgOpenThirdHome() {
+        openHome(1, 3);
+    }
 
 
+    public void kgMap2OpenFirstHome() {
+        openHome(2, 1);
+    }
+
+    public void kgMap2OpenSecondHome() {
+        openHome(2, 2);
+    }
+
+    public void kgMap2OpenThirdHome() {
+        openHome(2, 3);
+    }
 }

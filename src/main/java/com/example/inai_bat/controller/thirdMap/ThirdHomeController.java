@@ -1,6 +1,5 @@
 package com.example.inai_bat.controller.thirdMap;
 
-import com.example.inai_bat.controller.secondMap.GameController2;
 import com.example.inai_bat.service.TextAnimator;
 import com.example.inai_bat.service.TextOutput;
 import javafx.application.Platform;
@@ -89,7 +88,7 @@ public class ThirdHomeController implements Initializable {
 
         alert.setOnCloseRequest(e -> {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/introduction.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/map1/introduction.fxml"));
                 Parent parent = fxmlLoader.load();
                 Stage stage = new Stage();
 

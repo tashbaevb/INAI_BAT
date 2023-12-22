@@ -1,12 +1,8 @@
 package com.example.inai_bat.controller;
 
-import com.example.inai_bat.controller.firstMap.GameController;
-import com.example.inai_bat.controller.secondMap.GameController2;
-import com.example.inai_bat.controller.thirdMap.GameController3;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,8 +10,9 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
-public class MainMenuController {
+import java.io.IOException;
 
+public class MainMenuController {
     @FXML
     private MenuButton menuButton;
 
@@ -24,70 +21,26 @@ public class MainMenuController {
 
     @FXML
     public void initialize() {
-        MenuItem map1 = new MenuItem("Karte 1");
-        map1.setOnAction(this::handlePlayButton);
-
-        MenuItem map2 = new MenuItem("Karte 2");
-        map2.setOnAction(this::handlePlayButton2);
-
-        MenuItem map3 = new MenuItem("Karte 3");
-        map3.setOnAction(this::handlePlayButton3);
-
-        menuButton.getItems().addAll(map1, map2, map3);
+        addMenuItem("Karte 1", "/com/example/inai_bat/map1/introduction.fxml");
+        addMenuItem("Karte 2", "/com/example/inai_bat/map2/introduction2.fxml");
+        addMenuItem("Karte 3", "/com/example/inai_bat/map3/introduction3.fxml");
     }
 
-    @FXML
-    private void handlePlayButton(ActionEvent event) {
+    private void addMenuItem(String text, String resource) {
+        MenuItem menuItem = new MenuItem(text);
+        menuItem.setOnAction(event -> handlePlayButton(resource));
+        menuButton.getItems().add(menuItem);
+    }
 
+    private void handlePlayButton(String resource) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/introduction.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            Stage currentStage = (Stage) menuButton.getScene().getWindow();
-            currentStage.close();
-        } catch (Exception e) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(resource));
+            Parent parent = fxmlLoader.load();
+            showStage(parent);
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    @FXML
-    private void handlePlayButton2(ActionEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/introduction2.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            Stage currentStage = (Stage) menuButton.getScene().getWindow();
-            currentStage.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    private void handlePlayButton3(ActionEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/thirdMap/introduction3.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            Stage currentStage = (Stage) menuButton.getScene().getWindow();
-            currentStage.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
 
     @FXML
     private void handleExitButton(ActionEvent event) {
@@ -95,19 +48,26 @@ public class MainMenuController {
         stage.close();
     }
 
+    @FXML
     public void handleKGButton() {
+        showStage("/com/example/inai_bat/kgHome.fxml");
+    }
+
+    private void showStage(String resource) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/kgHome.fxml"));
-            Parent parent = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-
-            stage.setScene(new Scene(parent));
-            stage.show();
-
-            Stage currentStage = (Stage) menuButton.getScene().getWindow();
-            currentStage.close();
-        } catch (Exception e) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(resource));
+            Parent parent = fxmlLoader.load();
+            showStage(parent);
+        } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void showStage(Parent parent) {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(parent));
+        stage.show();
+        Stage currentStage = (Stage) menuButton.getScene().getWindow();
+        currentStage.close();
     }
 }

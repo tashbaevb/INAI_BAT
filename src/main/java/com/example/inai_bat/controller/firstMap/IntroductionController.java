@@ -8,10 +8,8 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class IntroductionController {
-
     @FXML
     private Button playButton;
-
     @FXML
     private void handlePlayButton(ActionEvent event) {
         GameController.startGame();

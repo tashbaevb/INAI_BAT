@@ -12,7 +12,6 @@ public class JdbcDao {
 
 
     public void insertRecord(String email, String password) throws SQLException {
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e1) {

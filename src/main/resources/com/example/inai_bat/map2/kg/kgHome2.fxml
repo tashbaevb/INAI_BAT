@@ -9,28 +9,27 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0"
-            prefWidth="1412.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.inai_bat.kgController.firstMap.ThirdHomeController">
-
+            prefWidth="1437.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.inai_bat.kgController.secondMap.SecondHomeController">
     <children>
-        <ImageView fitHeight="794.0" fitWidth="1412.0">
+        <ImageView fitHeight="785.0" fitWidth="1437.0">
             <image>
-                <Image url="@../../images/characters/1616745103_46-p-komnata-v-derevenskom-dome-49.jpg"/>
+                <Image url="@../../images/characters/1633637692_36-p-starie-derevenskie-doma-vnutri-foto-36.jpg"/>
             </image>
         </ImageView>
-        <Pane prefHeight="797.0" prefWidth="1416.0" style="-fx-background-color: rgba(0, 0, 0, 0.6);">
+        <Pane prefHeight="785.0" prefWidth="1437.0" style="-fx-background-color: rgba(0, 0, 0, 0.6);">
             <children>
-                <Button fx:id="exitButton" layoutX="1021.0" layoutY="28.0" mnemonicParsing="false"
+                <Button fx:id="exitButton" layoutX="31.0" layoutY="28.0" mnemonicParsing="false"
                         onAction="#handleExitButton" prefHeight="50.0" prefWidth="143.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="кет">
+                        text="Дал">
                     <font>
                         <Font size="17.0"/>
                     </font>
                 </Button>
                 <!-- JavaFX Button 1 -->
-                <Button fx:id="button1" layoutX="61.0" layoutY="153.0" onAction="#handleButtonClick1" prefHeight="50.0"
-                        prefWidth="289.0"
+                <Button fx:id="button1" layoutX="61.0" layoutY="233.0" onAction="#handleButtonClick1" prefHeight="50.0"
+                        prefWidth="350.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Сиз адаттан тыш нерсе көрдүңүз беле?">
                     <font>
@@ -38,55 +37,56 @@
                     </font>
                 </Button>
                 <!-- JavaFX Button 2 -->
-                <Button fx:id="button2" layoutX="61.0" layoutY="220.0" onAction="#handleButtonClick2" prefHeight="50.0"
-                        prefWidth="288.0"
+                <Button fx:id="button2" layoutX="61.0" layoutY="300.0" onAction="#handleButtonClick2" prefHeight="50.0"
+                        prefWidth="350.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Өлтүрүлгөн мырза жөнүндө эмне билесиз?">
                     <font>
                         <Font size="17.0"/>
                     </font>
                 </Button>
-                <Button fx:id="button3" layoutX="61.0" layoutY="287.0" onAction="#handleButtonClick3" prefHeight="50.0"
+                <Button fx:id="button3" layoutX="86.0" layoutY="367.0" onAction="#handleButtonClick3" prefHeight="50.0"
                         prefWidth="287.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="Эмма Шнайдер жөнүндө кандай ойдосуз?">
+                        text="Фридрих Шмидт жөнүндө эмне билесиз?">
                     <font>
                         <Font size="17.0"/>
                     </font>
                 </Button>
-                <Button fx:id="button4" layoutX="61.0" layoutY="354.0" onAction="#handleButtonClick4" prefHeight="50.0"
+                <Button fx:id="button4" layoutX="86.0" layoutY="434.0" onAction="#handleButtonClick4" prefHeight="50.0"
                         prefWidth="286.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="Луиза Штайн жөнүндө кандай ойдосуз?">
+                        text="Эмил Штайнер жөнүндө кандай ойдосуз?">
                     <font>
                         <Font size="17.0"/>
                     </font>
                 </Button>
-                <Button fx:id="onButton" layoutX="1215.0" layoutY="28.0" mnemonicParsing="false"
+                <Button fx:id="onButton" layoutX="225.0" layoutY="28.0" mnemonicParsing="false"
                         onAction="#handleOnButton" prefHeight="50.0" prefWidth="143.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="Канкор">
+                        text="Mörder">
                     <font>
                         <Font size="17.0"/>
                     </font>
                 </Button>
-                <ImageView fitHeight="309.0" fitWidth="247.0" layoutX="1180.0" layoutY="503.0">
-                    <image>
-                        <Image url="@../../images/characters/char5.png"/>
-                    </image>
-                </ImageView>
             </children>
         </Pane>
-        <Label fx:id="label" layoutX="60.0" layoutY="488.0" prefHeight="286.0" prefWidth="1050.0"
+        <Label fx:id="label" layoutX="44.0" layoutY="578.0" prefHeight="182.0" prefWidth="1104.0"
                style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-padding: 10; -fx-border-color: #000000; -fx-border-width: 5; -fx-background-radius: 50;"
-               text="'Ошол кечти үйүмдө китеп окуу менен өткөрдүм. Бул күнүмдүк кечтен эч кандай четтеп кеткеним эсимде жок. Эгер кошумча далил керек болсо, ошол күнү кечинде мени көргөн же үйдө экенимди уккан кошуналардан далил келтире алам'."
+               text="Жергиликтүү дүкөндүн ээси. Жөнөкөй, бирок чечкиндүү. Өлтүрүлгөн адам анын бир тууган агасы болгон. Алар чогуу дүкөн иштетип, бири-биринин бардык сырларын билишчү."
                textFill="WHITE" wrapText="true">
             <font>
                 <Font size="29.0"/>
             </font>
         </Label>
-        <Label fx:id="label1" layoutX="1190.0" layoutY="365.0" prefHeight="125.0" prefWidth="204.0"
-               style="-fx-text-fill: WHITE;" text="Отто Шмидт" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+        <ImageView fitHeight="335.0" fitWidth="267.0" layoutX="1179.0" layoutY="465.0">
+            <image>
+                <Image url="@../../images/characters/char9.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="label1" layoutX="1202.0" layoutY="409.0" prefHeight="60.0" prefWidth="220.0"
+               style="-fx-text-fill: WHITE;" text="Карла Мюллер " textAlignment="CENTER" textFill="WHITE"
+               wrapText="true">
             <font>
                 <Font size="29.0"/>
             </font>

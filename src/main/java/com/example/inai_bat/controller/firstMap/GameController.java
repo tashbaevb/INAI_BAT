@@ -15,7 +15,8 @@ public class GameController {
 
     public GameController(Stage stage) {
         this.stage = stage;
-        Image backgroundImage = new Image(getClass().getResourceAsStream("/com/example/inai_bat/images/maps/map_winter.png"));
+        Image backgroundImage = new Image(getClass().
+                getResourceAsStream("/com/example/inai_bat/images/maps/map_winter.png"));
         Image upStand = new Image(getClass().getResourceAsStream("/player/static.png"));
         Image upLeft = new Image(getClass().getResourceAsStream("/player/up_left.png"));
         Image upRight = new Image(getClass().getResourceAsStream("/player/up_right.png"));
@@ -26,20 +27,17 @@ public class GameController {
         Image leftLeft = new Image(getClass().getResourceAsStream("/player/left_left.png"));
         Image leftRight = new Image(getClass().getResourceAsStream("/player/left_right.png"));
 
-        player = new Player(20, 20, upStand, upLeft, upRight, downLeft, downRight, rightLeft, rightRight, leftRight, leftLeft, 650, 450);
+        player = new Player(20, 20, upStand, upLeft, upRight, downLeft, downRight,
+                rightLeft, rightRight, leftRight, leftLeft, 650, 450);
         parallaxBackground = new ParallaxBackground(backgroundImage, player);
-
         Pane pane = new Pane();
         pane.getChildren().add(parallaxBackground);
 
         Scene scene = new Scene(pane, 1437, 785);
-
         scene.setOnKeyPressed(e -> player.handleKeyPress(e.getCode()));
         scene.setOnKeyReleased(e -> player.handleKeyRelease(e.getCode()));
-
         stage.setScene(scene);
         stage.show();
-
         new AnimationTimer() {
             @Override
             public void handle(long now) {
@@ -47,6 +45,7 @@ public class GameController {
             }
         }.start();
     }
+
 
     public static void startGame() {
         Stage gameStage = new Stage();

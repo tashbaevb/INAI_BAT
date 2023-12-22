@@ -14,8 +14,6 @@ module com.example.inai_bat {
     opens com.example.inai_bat.kgController.firstMap;
     opens com.example.inai_bat.kgController.pauseMenu;
     opens com.example.inai_bat.kgController.secondMap;
-
-
     exports com.example.inai_bat;
     exports com.example.inai_bat.controller;
     exports com.example.inai_bat.kgController.firstMap;
@@ -31,3 +29,4 @@ module com.example.inai_bat {
     exports com.example.inai_bat.kgController;
     opens com.example.inai_bat.kgController to javafx.fxml;
 }
+

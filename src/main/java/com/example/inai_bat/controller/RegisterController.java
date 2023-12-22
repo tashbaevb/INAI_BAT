@@ -17,7 +17,6 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 public class RegisterController {
-
     @FXML
     private TextField emailIdField;
 
@@ -25,24 +24,14 @@ public class RegisterController {
     private PasswordField passwordField;
 
     @FXML
-    private Button submitButton;
-
-    @FXML
     public void register(ActionEvent event) throws SQLException {
+        Window owner = emailIdField.getScene().getWindow();
 
-        Window owner = submitButton.getScene().getWindow();
-
-        if (emailIdField.getText().isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
-                    "Please enter your email id");
+        if (emailIdField.getText().isEmpty() || passwordField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Formular Fehler!!",
+                    "Bitte geben Sie sowohl Ihre E-Mail-Adresse als auch Ihr Passwort ein.");
             return;
         }
-        if (passwordField.getText().isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
-                    "Please enter a password");
-            return;
-        }
-
         String emailId = emailIdField.getText();
         String password = passwordField.getText();
 
@@ -50,9 +39,9 @@ public class RegisterController {
         jdbcDao.insertRecord(emailId, password);
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Registration Successful!");
+        alert.setTitle("Anmeldung erfolgreich!");
         alert.setHeaderText(null);
-        alert.setContentText("Welcome " + emailIdField.getText());
+        alert.setContentText("Willkommen " + emailIdField.getText());
         alert.initOwner(owner);
         alert.showAndWait().ifPresent(response -> {
             if (response == ButtonType.OK) {
