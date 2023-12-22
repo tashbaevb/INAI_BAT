@@ -10,17 +10,13 @@ import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
 public class RegisterController {
-    @FXML
-    private TextField fullNameField;
 
     @FXML
     private TextField emailIdField;
@@ -36,12 +32,6 @@ public class RegisterController {
 
         Window owner = submitButton.getScene().getWindow();
 
-        if (fullNameField.getText().isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
-                    "Please enter your name");
-            return;
-        }
-
         if (emailIdField.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                     "Please enter your email id");
@@ -53,31 +43,42 @@ public class RegisterController {
             return;
         }
 
-        String fullName = fullNameField.getText();
         String emailId = emailIdField.getText();
         String password = passwordField.getText();
 
         JdbcDao jdbcDao = new JdbcDao();
-        jdbcDao.insertRecord(fullName, emailId, password);
+        jdbcDao.insertRecord(emailId, password);
 
-        showAlert(Alert.AlertType.CONFIRMATION, owner, "Registration Successful!",
-                "Welcome " + fullNameField.getText());
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Registration Successful!");
+        alert.setHeaderText(null);
+        alert.setContentText("Welcome " + emailIdField.getText());
+        alert.initOwner(owner);
+        alert.showAndWait().ifPresent(response -> {
+            if (response == ButtonType.OK) {
+                openHomeWindow(event);
+            }
+        });
     }
 
-    public void openLoginWindow(ActionEvent event) {
+    @FXML
+    private void openHomeWindow(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage loginStage = new Stage();
-            loginStage.setTitle("Login");
-            loginStage.setScene(scene);
-            loginStage.show();
+            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("home.fxml"));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            Stage homeStage = new Stage();
+            homeStage.setTitle("Home");
+            homeStage.setScene(scene);
+            homeStage.show();
+
+            Stage loginStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            loginStage.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        ((Node) event.getSource()).getScene().getWindow().hide();
     }
+
 
     private static void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
         Alert alert = new Alert(alertType);

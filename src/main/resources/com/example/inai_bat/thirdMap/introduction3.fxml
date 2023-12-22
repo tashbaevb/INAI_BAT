@@ -16,10 +16,9 @@
         </ImageView>
         <StackPane layoutX="145.0" layoutY="121.0" prefHeight="536.0" prefWidth="1151.0"
                    style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 70;">
-            <!-- Затемненное место с прозрачностью 0.5 -->
             <children>
                 <Text fill="WHITE" style="-fx-background-radius: 0.5;"
-                      text="Бизнесмен Маркус Беккер, известный своей сомнительной репутацией, найден мертвым. Его жестокие методы и коррупция привлекли внимание журналистки Марты Вебер, начавшей расследование. Водитель Беккера, Томас Шульц, и секретарь Сара Фишер также попали в центр интриг. Три соседа, у каждого свой мотив, стали подозреваемыми в загадочной гибели. Раскрытие тайн обещает потрясти маленькое сообщество."
+                      text="Der Geschäftsmann Markus Becker, der für seinen zweifelhaften Ruf bekannt war, wird tot aufgefunden. Seine brutalen Methoden und seine Korruption erregen die Aufmerksamkeit der Journalistin Martha Weber, die eine Untersuchung einleitet. Auch Beckers Fahrer Thomas Schultz und seine Sekretärin Sarah Fischer geraten ins Zentrum der Intrigen. Drei Nachbarn, jeder mit einem anderen Motiv, werden zu Verdächtigen im Zusammenhang mit den mysteriösen Todesfällen. Die Enthüllung der Geheimnisse verspricht, die kleine Gemeinde zu erschüttern."
                       textAlignment="CENTER" wrappingWidth="1081.0">
                     <font>
                         <Font size="29.0"/>
@@ -29,6 +28,6 @@
         </StackPane>
         <Button fx:id="playButton" layoutX="630.0" layoutY="666.0" onAction="#handlePlayButton"
                 style="-fx-font-size: 20; -fx-padding: 10 20; -fx-background-color: #FFFFFF; -fx-text-fill: #7ec5e7; -fx-background-radius: 15;"
-                text="Переход к игре"/>
+                text="Wechseln zum Spiel"/>
     </children>
 </AnchorPane>

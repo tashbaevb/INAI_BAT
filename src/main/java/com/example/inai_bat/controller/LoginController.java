@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -82,7 +83,7 @@ public class LoginController {
     }
 
 
-    public void openRegisterWindow(ActionEvent event) {
+    public void openRegisterWindow(MouseEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("register.fxml"));
             Scene scene = new Scene(fxmlLoader.load());

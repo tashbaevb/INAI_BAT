@@ -6,14 +6,18 @@ import com.example.inai_bat.service.TextOutput;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -43,13 +47,13 @@ public class ThirdHomeController implements Initializable {
             }
         };
 
-        textAnimator = new TextAnimator("Отто, медленно кивая, отвечает: \"Нет, детектив, в тот вечер было все так же тихо и спокойно, как обычно. Ничего не выходящего из обыденности я не запомнил. Кроме одной детали, вчера вечером Фрау Луиза очень долго стояла у двери у господина убитого.\"",
+        textAnimator = new TextAnimator("Nein, ich habe nichts Ungewöhnliches gesehen. Ich verließ das Haus gegen sechs Uhr abends und ging in den Laden, um Lebensmittel einzukaufen. In der Nähe des Hauses von Markus Becker habe ich keine verdächtigen Personen oder Autos bemerkt.",
                 0.2, textOutput);
-        textAnimator2 = new TextAnimator("\"Леонид был талантливым художником, и я часто бывал у него в студии. У нас были приятные разговоры о прошлом деревни. Он был мистическим, как и его картины, но никаких конфликтов между нами не возникало. Всегда казалось, что мы понимаем друг друга.\"",
+        textAnimator2 = new TextAnimator("Er war mein Arbeitgeber, und ich habe ihm bei dem Papierkram geholfen. Ich weiß nicht, was er getan hat, und es ist mir auch egal.",
                 0.2, textOutput);
-        textAnimator3 = new TextAnimator("Отто, думая, отвечает: \"С Эммой мы хорошие знакомые. Я часто бываю в ее магазине, и она была для меня источником интересных антиквариатов и занимательных рассказов. Мы никогда не имели разногласий, всегда общались дружелюбно.\"",
+        textAnimator3 = new TextAnimator("Ich kenne sie nicht persönlich, aber ich habe von Marcus Becker von ihr gehört. Er sagte, sie sei eine aufdringliche Journalistin, die versuche, seinen Ruf und sein Geschäft zu ruinieren. Er sagte, sie sei sein Feind und er wolle sie verklagen.",
                 0.2, textOutput);
-        textAnimator4 = new TextAnimator("Отто улыбается: \"Луиза - молодой души человек. Ее энтузиазм за фотографию заразителен. Мы не очень близки, но иногда бываю в библиотеке, где она исследует свои творческие проекты. Она приносит свежий взгляд на нашу тихую деревню.\"",
+        textAnimator4 = new TextAnimator("Ich kenne ihn nicht persönlich, aber ich habe ihn ein paar Mal gesehen, als er Marcus Becker abholte. Er war sein Fahrer und Sicherheitsbeamter. Er sagte, er sei sein Freund und er habe ihn vor Gefahren geschützt.",
                 0.2, textOutput);
 
     }
@@ -77,16 +81,26 @@ public class ThirdHomeController implements Initializable {
 
     @FXML
     void handleOnButton(ActionEvent event) {
-        ButtonType repeatAgain = new ButtonType("Noch ein Mal");
-        Alert alert = new Alert(Alert.AlertType.NONE, "", repeatAgain);
+        ButtonType goToNextSceneButton = new ButtonType("Weiter zur nächsten Szene");
+        Alert alert = new Alert(Alert.AlertType.NONE, "", goToNextSceneButton);
         alert.setHeaderText(null);
-        alert.setTitle("Yahoo");
-        alert.setContentText("Sie gewonnen");
+        alert.setTitle("Glückwunsch");
+        alert.setContentText("SIE HABEN GEWONNEN");
 
         alert.setOnCloseRequest(e -> {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/firstMap/introduction.fxml"));
+                Parent parent = fxmlLoader.load();
+                Stage stage = new Stage();
 
-            GameController3.startGame3();
-            closeCurrentWindow(event);
+                stage.setScene(new Scene(parent));
+                stage.show();
+
+                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                currentStage.close();
+            } catch (IOException exception) {
+                exception.printStackTrace();
+            }
         });
 
         alert.showAndWait();

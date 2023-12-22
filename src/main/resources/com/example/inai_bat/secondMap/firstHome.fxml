@@ -32,7 +32,7 @@
                 <Button fx:id="button1" layoutX="61.0" layoutY="233.0" onAction="#handleButtonClick1" prefHeight="50.0"
                         prefWidth="289.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="Видели ли вы что-нибудь необычное?">
+                        text="Haben Sie etwas Ungewöhnliches gesehen?">
                     <font>
                         <Font size="17.0"/>
                     </font>
@@ -41,7 +41,7 @@
                 <Button fx:id="button2" layoutX="61.0" layoutY="300.0" onAction="#handleButtonClick2" prefHeight="50.0"
                         prefWidth="288.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="Что вы знаете о господине убитом?">
+                        text="Was wissen Sie über den ermordeten Herrn?">
                     <font>
                         <Font size="17.0"/>
                     </font>
@@ -49,7 +49,7 @@
                 <Button fx:id="button3" layoutX="61.0" layoutY="367.0" onAction="#handleButtonClick3" prefHeight="50.0"
                         prefWidth="287.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="Что вы думаете о Эмме Шнайдер?">
+                        text="Was halten Sie von Karl Mueller?">
                     <font>
                         <Font size="17.0"/>
                     </font>
@@ -57,7 +57,7 @@
                 <Button fx:id="button4" layoutX="61.0" layoutY="434.0" onAction="#handleButtonClick4" prefHeight="50.0"
                         prefWidth="286.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
-                        text="Что вы думаете об Отто Шмидте?">
+                        text="Was halten Sie von Emil Steiner?">
                     <font>
                         <Font size="17.0"/>
                     </font>
@@ -74,7 +74,7 @@
         </Pane>
         <Label fx:id="label" layoutX="20.0" layoutY="528.0" prefHeight="266.0" prefWidth="1170.0"
                style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-padding: 10; -fx-border-color: #000000; -fx-border-width: 5; -fx-background-radius: 50;"
-               text="&quot;Что касается того вечера, я провела там несколько часов, пока светлело. Мое время в лесу было довольно интенсивным, и я могу подтвердить, что ни в каких других местах деревни или близлежащих районах я не находилась. Когда я вернулась, сразу пошла в свой дом.&quot;&quot;Могу ли я вам предоставить свидетельство? Может быть, фотографии, которые я сделала той ночью? Я стараюсь фиксировать каждый момент, и это может служить доказательством того, где я находилась в определенный момент времени.&quot;"
+               text="Ein Postbote, gesellig und immer auf dem Laufenden über das Geschehen im Dorf. Er kannte den Ermordeten besser als jeder andere, da er ihn jeden Tag beim Austragen der Post sah. "
                textFill="WHITE" wrapText="true">
             <font>
                 <Font size="29.0"/>

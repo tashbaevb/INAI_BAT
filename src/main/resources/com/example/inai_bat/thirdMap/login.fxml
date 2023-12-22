@@ -10,38 +10,43 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+<BorderPane fx:controller="com.example.inai_bat.controller.LoginController" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
             prefWidth="600.0" style="-fx-background-color: #76B2E4;" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inai_bat.controller.LoginController">
+            xmlns:fx="http://javafx.com/fxml/1">
     <left>
         <AnchorPane prefHeight="400.0" prefWidth="280.0"
                     style="-fx-border-color: #FFFFFF; -fx-border-width: 2px; -fx-border-radius: 5px;"
                     BorderPane.alignment="CENTER">
             <children>
-                <TextField fx:id="emailField" layoutX="16.0" layoutY="192.0" prefHeight="26.0" prefWidth="245.0"
+                <Label layoutX="14.0" layoutY="250.0" text="Username" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="Broadway" size="20.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="285.0" text="Password" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="Broadway" size="20.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="emailField" layoutX="130.0" layoutY="249.0" prefHeight="25.0" prefWidth="140.0"
                            promptText="Email"/>
-                <PasswordField fx:id="passwordField" layoutX="17.0" layoutY="228.0" prefHeight="26.0" prefWidth="244.0"
+                <PasswordField fx:id="passwordField" layoutX="130.0" layoutY="285.0" prefHeight="25.0" prefWidth="140.0"
                                promptText="Password"/>
-                <Button fx:id="loginbutton" layoutX="51.0" layoutY="281.0" mnemonicParsing="false" onAction="#login"
-                        prefHeight="42.0" prefWidth="178.0"
+                <Button fx:id="loginbutton" layoutX="51.0" layoutY="341.0" mnemonicParsing="false" prefHeight="42.0"
+                        prefWidth="178.0" onAction="#login"
                         style="-fx-background-color: #76B2E4; -fx-border-color: #FFFFFF; -fx-border-width: 2px;"
                         text="Login" textAlignment="JUSTIFY">
                     <font>
                         <Font name="Broadway" size="20.0"/>
                     </font>
                 </Button>
-                <ImageView fitHeight="95.0" fitWidth="112.0" layoutX="77.0" layoutY="59.0" pickOnBounds="true"
+                <ImageView fitHeight="95.0" fitWidth="112.0" layoutX="77.0" layoutY="69.0" pickOnBounds="true"
                            preserveRatio="true">
                     <image>
-                        <Image url="@images/Lupa.png"/>
+                        <Image url="@../images/Lupa.png"/>
                     </image>
                 </ImageView>
-                <Label layoutX="59.0" layoutY="345.0" text="Sie haben noch kein Konto? Anmelden" textAlignment="JUSTIFY"
-                       onMouseClicked="#openRegisterWindow">
-                    <font>
-                        <Font size="10.0"/>
-                    </font>
-                </Label>
             </children>
         </AnchorPane>
     </left>
@@ -51,7 +56,7 @@
                 <ImageView fitHeight="489.0" fitWidth="307.0" layoutX="-18.0" layoutY="-1.0" pickOnBounds="true"
                            preserveRatio="true">
                     <image>
-                        <Image url="@images/RyanGosling.png"/>
+                        <Image url="@../images/RyanGosling.png"/>
                     </image>
                 </ImageView>
             </children>

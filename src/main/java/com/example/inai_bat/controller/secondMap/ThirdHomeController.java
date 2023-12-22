@@ -43,13 +43,13 @@ public class ThirdHomeController implements Initializable {
             }
         };
 
-        textAnimator = new TextAnimator("Отто, медленно кивая, отвечает: \"Нет, детектив, в тот вечер было все так же тихо и спокойно, как обычно. Ничего не выходящего из обыденности я не запомнил. Кроме одной детали, вчера вечером Фрау Луиза очень долго стояла у двери у господина убитого.\"",
+        textAnimator = new TextAnimator("Nein, ich glaube nicht, aber wenn man darüber nachdenkt, hat Carla am Tag des Mordes nach Wasserstoffperoxid gerochen, das gefiel mir nicht besonders, und ihr Gesicht war am Boden zerstört, wenn man das so beschreiben kann",
                 0.2, textOutput);
-        textAnimator2 = new TextAnimator("\"Леонид был талантливым художником, и я часто бывал у него в студии. У нас были приятные разговоры о прошлом деревни. Он был мистическим, как и его картины, но никаких конфликтов между нами не возникало. Всегда казалось, что мы понимаем друг друга.\"",
+        textAnimator2 = new TextAnimator("Er war ein arroganter Nachbar mit der seltsamen Neigung, ständig unhöflich zu sein. Ich mochte ihn als Person nie und habe daher nicht wirklich mit ihm kommuniziert",
                 0.2, textOutput);
-        textAnimator3 = new TextAnimator("Отто, думая, отвечает: \"С Эммой мы хорошие знакомые. Я часто бываю в ее магазине, и она была для меня источником интересных антиквариатов и занимательных рассказов. Мы никогда не имели разногласий, всегда общались дружелюбно.\"",
+        textAnimator3 = new TextAnimator("Eine besorgte Frau, die ständig mit ihrem Bruder stritt. Sie arbeitete ständig in ihrem Laden und versuchte zu expandieren, aber ihr Bruder kam ihr in die Quere.",
                 0.2, textOutput);
-        textAnimator4 = new TextAnimator("Отто улыбается: \"Луиза - молодой души человек. Ее энтузиазм за фотографию заразителен. Мы не очень близки, но иногда бываю в библиотеке, где она исследует свои творческие проекты. Она приносит свежий взгляд на нашу тихую деревню.\"",
+        textAnimator4 = new TextAnimator("Ein frivoler Mann, nicht mehr und nicht weniger, er hat nur Post zugestellt und mit Carla geflirtet.",
                 0.2, textOutput);
 
     }

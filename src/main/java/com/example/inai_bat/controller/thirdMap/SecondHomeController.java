@@ -43,13 +43,13 @@ public class SecondHomeController implements Initializable {
             }
         };
 
-        textAnimator = new TextAnimator("\"В тот вечер я, действительно, проводила время в лесу, пытаясь запечатлеть красоту заката. Это была моя попытка поймать в кадр момент, когда звезды начинают пробуждаться на небесах. Но, к сожалению, мое внимание было полностью поглощено работой, и я не заметила ничего необычного или подозрительного вокруг.\"",
+        textAnimator = new TextAnimator("Nein, ich habe nichts Ungewöhnliches gesehen. Ich kam nach der Arbeit nach Hause und ging in die Werkstatt, um mein Auto zu reparieren. Ich habe keine Geräusche oder Schreie aus dem Haus von Markus Becker gehört.",
                 0.2, textOutput);
-        textAnimator2 = new TextAnimator("\"Что касается господина Краузе, то мы не общались особо много, но каждая встреча с ним была приятной. Он был талантливым художником, чьи картины заставляли задуматься. Но я не могу сказать, что знала его личностно.\"",
+        textAnimator2 = new TextAnimator("Ich weiß, dass er mein Arbeitgeber war, und ich war bei verschiedenen Gelegenheiten für ihn auf Reisen. Ich weiß nicht, was er gemacht hat, und es interessiert mich auch nicht. Ich habe nur meine Arbeit gemacht und wurde dafür bezahlt.",
                 0.2, textOutput);
-        textAnimator3 = new TextAnimator("\"Относительно Эммы Шнайдер, она, конечно, талантливая торговка, но наши интересы различны. Я не часто захожу в антикварные магазины, хотя в ее магазине я бывала пару раз. Никаких неприятных моментов у нас не было.\"",
+        textAnimator3 = new TextAnimator("Ich kenne sie nicht persönlich, aber ich habe sie mehrmals gesehen, als sie sich dem Haus von Markus Becker mit einer Kamera und einem Mikrofon näherte. Ich glaube, sie war eine Journalistin, die versuchte, einen sensationellen Bericht über ihn zu machen.",
                 0.2, textOutput);
-        textAnimator4 = new TextAnimator("\"А вот с господином Шмидтом у меня несколько больше общего. Я часто захожу в библиотеку, где он рассказывает интересные истории о прошлом деревни. Он образованный человек, и его рассказы всегда приносят что-то новое.\"",
+        textAnimator4 = new TextAnimator("Ich kenne sie nicht persönlich, aber ich habe sie ein paar Mal gesehen, als sie mit einer Tasche und Papieren das Haus von Marcus Becker verließ. Ich glaube, sie war seine Sekretärin oder Buchhalterin. Ich weiß nicht, in welcher Beziehung sie zueinander standen, aber ich denke, sie könnte über seine Finanzen Bescheid gewusst haben.",
                 0.2, textOutput);
 
     }
@@ -78,7 +78,7 @@ public class SecondHomeController implements Initializable {
 
     @FXML
     void handleOnButton(ActionEvent event) {
-        ButtonType goToNextSceneButton = new ButtonType("Go to Next Scene");
+        ButtonType goToNextSceneButton = new ButtonType("Noch ein Mal");
         Alert alert = new Alert(Alert.AlertType.NONE, "", goToNextSceneButton);
         alert.setHeaderText(null);
         alert.setTitle("So schade");
@@ -86,7 +86,7 @@ public class SecondHomeController implements Initializable {
 
         alert.setOnCloseRequest(e -> {
 
-            GameController.startGame();
+            GameController3.startGame3();
             closeCurrentWindow(event);
         });
 

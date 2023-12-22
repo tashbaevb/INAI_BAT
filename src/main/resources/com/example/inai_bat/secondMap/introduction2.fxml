@@ -15,10 +15,9 @@
         </ImageView>
         <StackPane layoutX="145.0" layoutY="121.0" prefHeight="536.0" prefWidth="1151.0"
                    style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 70;">
-            <!-- Затемненное место с прозрачностью 0.5 -->
             <children>
                 <Text fill="WHITE" style="-fx-background-radius: 0.5;"
-                      text="В небольшой деревне взаимоотношения между Герхардом и Карлой Мюллер близки к разрыву из-за семейных и бизнес-непониманий. Герхард стремится к контролю и владению магазином, в то время как Карла мечтает о собственной независимости. Фридрих Шмидт, поддавшись влиянию слухов, может пытаться воздействовать на обстановку, а Эмиль Штайнер, чувствуя недовольство отношениями с Герхардом из-за земельных вопросов, мог бы почувствовать нарастающую напряженность. В этой зловещей атмосфере каждый из них, в определенных обстоятельствах, мог бы стать убийцей, дав долгожданное выход своим собственным темным чувствам и недовольству."
+                      text="In einem kleinen Dorf droht die Beziehung zwischen Gerhard und Carla Müller an familiären und geschäftlichen Missverständnissen zu zerbrechen. Gerhard strebt nach Kontrolle und Besitz des Ladens, während Carla von ihrer eigenen Unabhängigkeit träumt. Friedrich Schmidt, der von Gerüchten beeinflusst wird, könnte versuchen, die Situation zu beeinflussen, und Emil Steiner, der sich wegen seiner Beziehung zu Gerhard über Landfragen ärgert, könnte die wachsende Spannung spüren. In dieser bedrohlichen Atmosphäre könnte jeder von ihnen unter den richtigen Umständen zum Mörder werden und damit seinen eigenen dunklen Gefühlen und Kränkungen ein willkommenes Ventil geben."
                       textAlignment="CENTER" wrappingWidth="1081.0">
                     <font>
                         <Font size="29.0"/>
@@ -28,6 +27,6 @@
         </StackPane>
         <Button fx:id="playButton" layoutX="630.0" layoutY="666.0" onAction="#handlePlayButton"
                 style="-fx-font-size: 20; -fx-padding: 10 20; -fx-background-color: #FFFFFF; -fx-text-fill: #7ec5e7; -fx-background-radius: 15;"
-                text="Переход к игре"/>
+                text="Wechseln zum Spiel"/>
     </children>
 </AnchorPane>

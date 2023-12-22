@@ -19,10 +19,9 @@
         </ImageView>
         <StackPane layoutX="145.0" layoutY="121.0" prefHeight="536.0" prefWidth="1151.0"
                    style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 70;">
-            <!-- Затемненное место с прозрачностью 0.5 -->
             <children>
                 <Text fill="WHITE" style="-fx-background-radius: 0.5;"
-                      text="Детектив Карл Шпайхер, стремящийся отдохнуть от городской суеты, оказывается в таинственной деревне, где спокойствие и тишина маскируют темные тайны. Эмма Шнайдер, Леонид Краузе, Луиза Штайн и Отто Шмидт – загадочные соседи с тайнами в своих прошлых. Убийство Леонида в его студии ставит под подозрение всех, включая Эмму, Луизу и Отто. В этой деревне, где шепчет прошлое, и в темноте ночи таится разгадка, детектив Карл Шпайхер сталкивается с вызовом, который может разрушить не только его покой, но и спокойствие всего этого загадочного уголка мира."
+                      text="Detektiv Karl Speicher sucht eine Auszeit von der Hektik der Stadt und findet sich in einem mysteriösen Dorf wieder, in dem Ruhe und Frieden dunkle Geheimnisse verbergen. Emma Schneider, Leonid Krause, Louise Stein und Otto Schmidt sind mysteriöse Nachbarn mit Geheimnissen in ihrer Vergangenheit. Als Leonid in seinem Atelier ermordet wird, geraten alle unter Verdacht, auch Emma, Louise und Otto. In diesem Dorf, in dem die Vergangenheit flüstert und Hinweise im Dunkel der Nacht lauern, steht Kommissar Karl Speicher vor einer Herausforderung, die nicht nur seinen Frieden, sondern den Frieden dieser ganzen geheimnisvollen Ecke der Welt zerstören könnte."
                       textAlignment="CENTER" wrappingWidth="1081.0">
                     <font>
                         <Font size="29.0"/>
@@ -32,6 +31,6 @@
         </StackPane>
         <Button fx:id="playButton" layoutX="630.0" layoutY="666.0" onAction="#handlePlayButton"
                 style="-fx-font-size: 20; -fx-padding: 10 20; -fx-background-color: #FFFFFF; -fx-text-fill: #7ec5e7; -fx-background-radius: 15;"
-                text="Переход к игре"/>
+                text="Wechseln zum Spiel"/>
     </children>
 </AnchorPane>

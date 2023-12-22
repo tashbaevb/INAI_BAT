@@ -6,14 +6,18 @@ import com.example.inai_bat.service.TextOutput;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -77,20 +81,31 @@ public class SecondHomeController implements Initializable {
 
     @FXML
     void handleOnButton(ActionEvent event) {
-        ButtonType goToNextSceneButton = new ButtonType("Go to Next Scene");
+        ButtonType goToNextSceneButton = new ButtonType("Weiter zur nächsten Szene");
         Alert alert = new Alert(Alert.AlertType.NONE, "", goToNextSceneButton);
         alert.setHeaderText(null);
-        alert.setTitle("Congratil");
-        alert.setContentText("YOU WON");
+        alert.setTitle("Glückwunsch");
+        alert.setContentText("SIE HABEN GEWONNEN");
 
         alert.setOnCloseRequest(e -> {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/secondMap/introduction2.fxml"));
+                Parent parent = fxmlLoader.load();
+                Stage stage = new Stage();
 
-            GameController2.startGame2();
-            closeCurrentWindow(event);
+                stage.setScene(new Scene(parent));
+                stage.show();
+
+                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                currentStage.close();
+            } catch (IOException exception) {
+                exception.printStackTrace();
+            }
         });
 
         alert.showAndWait();
     }
+
 
 
     @FXML

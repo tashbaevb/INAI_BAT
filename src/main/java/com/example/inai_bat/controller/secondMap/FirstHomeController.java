@@ -44,13 +44,13 @@ public class FirstHomeController implements Initializable {
             }
         };
 
-        textAnimator = new TextAnimator("Эмма, всматриваясь в глаза детектива, отвечает: \"Нет, этот вечер был как и любой другой. В деревне всегда так тихо, особенно после закрытия магазинов. Я не заметила ничего необычного. Хотя, подождите, за день до этого Луиза Штайн приобрела Гладиус солдата IV Галльского легиона\"",
+        textAnimator = new TextAnimator("Ja natürlich. In letzter Zeit ist etwas Seltsames passiert. Ich bemerkte Schatten und hörte ungewöhnliche Geräusche in ruhigen Ecken des Dorfes. Aber ich dachte, das wären nur meine Fantasien und ich hätte zu hart gearbeitet, aber ich kann von morgens bis abends auf der Post sein, und genau das ist am Tag des Mordes passiert.",
                 0.2, textOutput);
-        textAnimator2 = new TextAnimator("Эмма медленно кивает, словно она перебирает в памяти множество деталей: \"Леонид был талантливым художником. Мы общались, конечно, особенно когда ему нужны были антикварные предметы для его работ. Он был постоянным клиентом моего магазина. Но никаких конфликтов или разногласий между нами не было. Я уважала его творческий взгляд, как и он, вероятно, уважал мою коллекцию.\"",
+        textAnimator2 = new TextAnimator("(nachdenklich) Gerhard war ein freundlicher Mann. Wir trafen uns im Dorf und tauschten Neuigkeiten aus. Hat mir immer mit der Post geholfen, wenn etwas Besonderes passiert ist. Er war immer der Erste, der zu Hilfe kam, dieser Mann tut mir leid.",
                 0.2, textOutput);
-        textAnimator3 = new TextAnimator("Эмма, снова медленно обдумывая вопрос, отвечает: \"Луиза - молодая девушка, и я уважаю ее страсть к фотографии. Нам не часто приходилось пересекаться, но она бывала в моем магазине, и мы иногда обменивались несколькими словами. Ничего необычного в ее поведении или отношениях со мной я не замечала.\"",
+        textAnimator3 = new TextAnimator("Carla war schon immer eine fleißige und zuverlässige Frau. Wir stehen uns nicht allzu nahe, aber sie war immer gutherzig. Ich bezweifle, dass eine so reine Seele so etwas tun könnte. Obwohl... In letzter Zeit ist Carla zurückgezogener geworden und manchmal sieht man sie etwas Unverständliches murmeln.",
                 0.2, textOutput);
-        textAnimator4 = new TextAnimator("Эмма, с тенью размышлений в глазах, отвечает: \"Отто всегда был добрым соседом. Мы действительно общались, делясь воспоминаниями о прошлом, и он иногда заглядывал ко мне в магазин. Но я не могу представить себе, чтобы он мог совершить что-то подобное. Он всегда казался таким мирным и дружелюбным.\"",
+        textAnimator4 = new TextAnimator("Emil... er war immer irgendwie still. Mann der Erde. Wir kommunizieren nicht viel. Er strahlt etwas Geheimnisvolles aus, aber ich war nicht besonders mit ihm befreundet, daher kann ich nichts Besonderes mitteilen.",
                 0.2, textOutput);
 
     }

@@ -57,7 +57,7 @@ public class RegisterController {
         String password = passwordField.getText();
 
         JdbcDao jdbcDao = new JdbcDao();
-        jdbcDao.insertRecord(fullName, emailId, password);
+        jdbcDao.insertRecord(emailId, password);
 
         showAlert(Alert.AlertType.CONFIRMATION, owner, "Registration Successful!",
                 "Welcome " + fullNameField.getText());

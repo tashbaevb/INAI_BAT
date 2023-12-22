@@ -6,14 +6,18 @@ import com.example.inai_bat.service.TextOutput;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -42,15 +46,14 @@ public class SecondHomeController implements Initializable {
             }
         };
 
-        textAnimator = new TextAnimator("\"В тот вечер я, действительно, проводила время в лесу, пытаясь запечатлеть красоту заката. Это была моя попытка поймать в кадр момент, когда звезды начинают пробуждаться на небесах. Но, к сожалению, мое внимание было полностью поглощено работой, и я не заметила ничего необычного или подозрительного вокруг.\"",
+        textAnimator = new TextAnimator("Hmm, lassen Sie mich nachdenken, eigentlich nein, außer dass sich nach dem Mord die Stimmung aller Bewohner verschlechtert hat und alle traurig umherlaufen",
                 0.2, textOutput);
-        textAnimator2 = new TextAnimator("\"Что касается господина Краузе, то мы не общались особо много, но каждая встреча с ним была приятной. Он был талантливым художником, чьи картины заставляли задуматься. Но я не могу сказать, что знала его личностно.\"",
+        textAnimator2 = new TextAnimator("Vieles, er war mein lieber Bruder, wir sind zusammen aufgewachsen, natürlich kenne ich ihn besser als andere Bewohner, ja, es gab kürzlich Konflikte, aber ich dachte immer noch, dass sie eines Tages enden würden, wir sind alle nur ein bisschen müde von allem und so.",
                 0.2, textOutput);
-        textAnimator3 = new TextAnimator("\"Относительно Эммы Шнайдер, она, конечно, талантливая торговка, но наши интересы различны. Я не часто захожу в антикварные магазины, хотя в ее магазине я бывала пару раз. Никаких неприятных моментов у нас не было.\"",
+        textAnimator3 = new TextAnimator("Er ist ein süßer Mann, der, wenn er dich sieht, ein schneeweißes Lächeln lächelt und mit der Hand winkt. Er ist der klügste Bewohner dieses Ortes. Ich bezweifle, dass er in der Lage ist, eine Fliege zu töten, aber hier einen Menschen.",
                 0.2, textOutput);
-        textAnimator4 = new TextAnimator("\"А вот с господином Шмидтом у меня несколько больше общего. Я часто захожу в библиотеку, где он рассказывает интересные истории о прошлом деревни. Он образованный человек, и его рассказы всегда приносят что-то новое.\"",
+        textAnimator4 = new TextAnimator("Er ist ein geheimnisvoller Mann, er verlässt sein Haus nicht den ganzen Tag und kommuniziert selten mit Menschen. Ich bezweifle, dass ich irgendetwas Verständliches über ihn erzählen kann.",
                 0.2, textOutput);
-
     }
 
 
@@ -77,16 +80,26 @@ public class SecondHomeController implements Initializable {
 
     @FXML
     void handleOnButton(ActionEvent event) {
-        ButtonType goToNextSceneButton = new ButtonType("Go to Next Scene");
+        ButtonType goToNextSceneButton = new ButtonType("Weiter zur nächsten Szene");
         Alert alert = new Alert(Alert.AlertType.NONE, "", goToNextSceneButton);
         alert.setHeaderText(null);
-        alert.setTitle("Yahoo!");
-        alert.setContentText("Sie gewonnen");
+        alert.setTitle("Glückwunsch");
+        alert.setContentText("SIE HABEN GEWONNEN");
 
         alert.setOnCloseRequest(e -> {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/inai_bat/thirdMap/introduction3.fxml"));
+                Parent parent = fxmlLoader.load();
+                Stage stage = new Stage();
 
-            GameController3.startGame3();
-            closeCurrentWindow(event);
+                stage.setScene(new Scene(parent));
+                stage.show();
+
+                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                currentStage.close();
+            } catch (IOException exception) {
+                exception.printStackTrace();
+            }
         });
 
         alert.showAndWait();

@@ -44,13 +44,13 @@ public class FirstHomeController implements Initializable {
             }
         };
 
-        textAnimator = new TextAnimator("Эмма, всматриваясь в глаза детектива, отвечает: \"Нет, этот вечер был как и любой другой. В деревне всегда так тихо, особенно после закрытия магазинов. Я не заметила ничего необычного. Хотя, подождите, за день до этого Луиза Штайн приобрела Гладиус солдата IV Галльского легиона\"",
+        textAnimator = new TextAnimator("Nein, ich habe nichts Ungewöhnliches gesehen. Ich verließ das Haus früh am Morgen und kam spät in der Nacht zurück. Ich wusste nicht, dass Marcus Becker etwas zugestoßen war, bis die Polizei eintraf.",
                 0.2, textOutput);
-        textAnimator2 = new TextAnimator("Эмма медленно кивает, словно она перебирает в памяти множество деталей: \"Леонид был талантливым художником. Мы общались, конечно, особенно когда ему нужны были антикварные предметы для его работ. Он был постоянным клиентом моего магазина. Но никаких конфликтов или разногласий между нами не было. Я уважала его творческий взгляд, как и он, вероятно, уважал мою коллекцию.\"",
+        textAnimator2 = new TextAnimator("Ich weiß, dass er ein grausamer und skrupelloser Mann war, der seine Arbeiter ausbeutete und das Gesetz manipulierte. Ich habe versucht, seine Verbrechen aufzuklären und ihn vor Gericht zu bringen.",
                 0.2, textOutput);
-        textAnimator3 = new TextAnimator("Эмма, снова медленно обдумывая вопрос, отвечает: \"Луиза - молодая девушка, и я уважаю ее страсть к фотографии. Нам не часто приходилось пересекаться, но она бывала в моем магазине, и мы иногда обменивались несколькими словами. Ничего необычного в ее поведении или отношениях со мной я не замечала.\"",
+        textAnimator3 = new TextAnimator("Ich kenne ihn nicht persönlich, aber ich habe gehört, dass er für Marcus Becker als Fahrer gearbeitet hat. Ich denke, er könnte Zeuge oder Teilnehmer seiner skrupellosen Machenschaften gewesen sein.",
                 0.2, textOutput);
-        textAnimator4 = new TextAnimator("Эмма, с тенью размышлений в глазах, отвечает: \"Отто всегда был добрым соседом. Мы действительно общались, делясь воспоминаниями о прошлом, и он иногда заглядывал ко мне в магазин. Но я не могу представить себе, чтобы он мог совершить что-то подобное. Он всегда казался таким мирным и дружелюбным.\"",
+        textAnimator4 = new TextAnimator("Ich weiß, dass sie klug und gerissen ist, ich habe sie ein paar Mal im Haus von Marcus Becker gesehen. Ich glaube, sie war seine Geliebte.",
                 0.2, textOutput);
     }
 
