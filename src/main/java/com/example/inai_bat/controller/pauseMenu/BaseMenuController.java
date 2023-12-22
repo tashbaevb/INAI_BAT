@@ -1,6 +1,7 @@
 package com.example.inai_bat.controller.pauseMenu;
 
 import com.example.inai_bat.MainApplication;
+import com.example.inai_bat.config.MusicPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,6 +38,8 @@ public abstract class BaseMenuController {
             homeStage.setTitle("Home");
             homeStage.setScene(scene);
             homeStage.show();
+            MusicPlayer.stopMusic();
+            MusicPlayer.playDefaultMusic();
 
             Stage currentMenu = (Stage) ((Node) event.getSource()).getScene().getWindow();
             currentMenu.close();

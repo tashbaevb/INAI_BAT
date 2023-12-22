@@ -2,21 +2,22 @@ package com.example.inai_bat.controller;
 
 import com.example.inai_bat.MainApplication;
 import com.example.inai_bat.config.JdbcDao;
+import com.example.inai_bat.config.MusicPlayer;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-import java.io.IOException;
 import java.sql.*;
 
 import static com.example.inai_bat.config.JdbcDao.*;
@@ -36,6 +37,7 @@ public class LoginController {
 
     public void login(ActionEvent event) {
         Window owner = emailField.getScene().getWindow();
+
         String email = emailField.getText();
         String password = passwordField.getText();
 
@@ -49,7 +51,9 @@ public class LoginController {
                     "Email not found.");
             return;
         }
+
         String dbPassword = getPasswordFromDatabase(email);
+
         if (dbPassword.equals(password)) {
             openHomeWindow(event);
         } else {
@@ -116,5 +120,10 @@ public class LoginController {
         alert.setContentText(message);
         alert.initOwner(owner);
         alert.show();
+    }
+
+    @FXML
+    public void initialize() {
+        MusicPlayer.playDefaultMusic();
     }
 }

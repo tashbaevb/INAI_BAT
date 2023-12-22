@@ -1,5 +1,6 @@
 package com.example.inai_bat.controller.thirdMap;
 
+import com.example.inai_bat.config.MusicPlayer;
 import com.example.inai_bat.controller.firstMap.GameController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,5 +23,11 @@ public class Introduction3Controller {
         Node source = (Node) event.getSource();
         Stage stage = (Stage) source.getScene().getWindow();
         stage.close();
+    }
+
+    @FXML
+    public void initialize() {
+        MusicPlayer.stopMusic();
+        MusicPlayer.playMap3Music();
     }
 }

@@ -1,5 +1,6 @@
 package com.example.inai_bat.entity;
 
+import com.example.inai_bat.config.MusicPlayer;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,13 +24,17 @@ public class KgPlayer extends Player {
         else if (code == KeyCode.E) {
             if (getTranslateX() == 170 && getTranslateY() == 460) {
                 kgOpenFirstHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 1280 && getTranslateY() == 240) {
                 kgOpenSecondHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 1330 && getTranslateY() == 580) {
                 kgOpenThirdHome();
+                MusicPlayer.playDoorOpenSound();
             }
         } else if (code == KeyCode.R) {
             kgOpenFirstMenu();
+            MusicPlayer.stopMusic();
         }
     }
 
@@ -42,13 +47,17 @@ public class KgPlayer extends Player {
         else if (code == KeyCode.E) {
             if (getTranslateX() == 350 && getTranslateY() == 300) {
                 kgMap2OpenFirstHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 290 && getTranslateY() == 650) {
                 kgMap2OpenSecondHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 790 && getTranslateY() == 260) {
                 kgMap2OpenThirdHome();
+                MusicPlayer.playDoorOpenSound();
             }
         } else if (code == KeyCode.R) {
             kgOpenSecondMenu();
+            MusicPlayer.stopMusic();
         }
     }
 

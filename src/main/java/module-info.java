@@ -9,6 +9,7 @@ module com.example.inai_bat {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
+    requires javafx.media;
 
     opens com.example.inai_bat to javafx.fxml;
     opens com.example.inai_bat.kgController.firstMap;

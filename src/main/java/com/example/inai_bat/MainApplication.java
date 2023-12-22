@@ -16,7 +16,7 @@ public class MainApplication extends Application {
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
         Parent root = loader.load();
-        LoginController loginController = loader.getController();
+//        LoginController loginController = loader.getController();
 
         Scene scene = new Scene(root, 600, 400);
         primaryStage.setTitle("Anmelden");

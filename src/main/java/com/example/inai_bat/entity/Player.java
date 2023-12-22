@@ -1,5 +1,6 @@
 package com.example.inai_bat.entity;
 
+import com.example.inai_bat.config.MusicPlayer;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Bounds;
 import javafx.scene.Parent;
@@ -55,13 +56,17 @@ public class Player extends ImageView {
         else if (code == KeyCode.E) {
             if (getTranslateX() == 170 && getTranslateY() == 460) {
                 openFirstHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 1280 && getTranslateY() == 240) {
                 openSecondHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 1330 && getTranslateY() == 580) {
                 openThirdHome();
+                MusicPlayer.playDoorOpenSound();
             }
         } else if (code == KeyCode.R) {
             openFirstMenu();
+            MusicPlayer.stopMusic();
         }
     }
 
@@ -73,13 +78,17 @@ public class Player extends ImageView {
         else if (code == KeyCode.E) {
             if (getTranslateX() == 350 && getTranslateY() == 300) {
                 map2OpenFirstHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 290 && getTranslateY() == 650) {
                 map2OpenSecondHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 790 && getTranslateY() == 260) {
                 map2OpenThirdHome();
+                MusicPlayer.playDoorOpenSound();
             }
         } else if (code == KeyCode.R) {
             openSecondMenu();
+            MusicPlayer.stopMusic();
         }
     }
 
@@ -91,13 +100,17 @@ public class Player extends ImageView {
         else if (code == KeyCode.E) {
             if (getTranslateX() == 180 && getTranslateY() == 170) {
                 map3OpenFirstHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 660 && getTranslateY() == 550) {
                 map3OpenSecondHome();
+                MusicPlayer.playDoorOpenSound();
             } else if (getTranslateX() == 1270 && getTranslateY() == 200) {
                 map3OpenThirdHome();
+                MusicPlayer.playDoorOpenSound();
             }
         } else if (code == KeyCode.R) {
             openThirdMenu();
+            MusicPlayer.stopMusic();
         }
     }
 
