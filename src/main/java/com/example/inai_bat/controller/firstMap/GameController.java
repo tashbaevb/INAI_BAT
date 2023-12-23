@@ -15,8 +15,7 @@ public class GameController {
 
     public GameController(Stage stage) {
         this.stage = stage;
-        Image backgroundImage = new Image(getClass().
-                getResourceAsStream("/com/example/inai_bat/images/maps/map_winter.png"));
+        Image backgroundImage = new Image(getClass().getResourceAsStream("/com/example/inai_bat/images/maps/map_winter.png"));
         Image upStand = new Image(getClass().getResourceAsStream("/player/static.png"));
         Image upLeft = new Image(getClass().getResourceAsStream("/player/up_left.png"));
         Image upRight = new Image(getClass().getResourceAsStream("/player/up_right.png"));
@@ -34,10 +33,13 @@ public class GameController {
         pane.getChildren().add(parallaxBackground);
 
         Scene scene = new Scene(pane, 1437, 785);
+
         scene.setOnKeyPressed(e -> player.handleKeyPress(e.getCode()));
         scene.setOnKeyReleased(e -> player.handleKeyRelease(e.getCode()));
+
         stage.setScene(scene);
         stage.show();
+
         new AnimationTimer() {
             @Override
             public void handle(long now) {

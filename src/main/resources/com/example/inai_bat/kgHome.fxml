@@ -45,7 +45,7 @@
         </font>
     </Button>
 
-        <Button layoutX="1120.0" layoutY="28.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="83.0"
+        <Button fx:id="deButton" onAction="#handleDEButton" layoutX="1120.0" layoutY="28.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="83.0"
                 style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #000000; -fx-font-size: 29.0;"
                 text="НЕ" textFill="WHITE">
             <font>

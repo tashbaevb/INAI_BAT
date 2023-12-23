@@ -40,7 +40,7 @@ public class Player extends ImageView {
         currentImage = upStand;
 
         houseBoundsList.add(new Rectangle(60, 367, 160, 85).getBoundsInLocal());
-        houseBoundsList.add(new Rectangle(1190, 165, 130, 55).getBoundsInLocal());
+//        houseBoundsList.add(new Rectangle(1190, 165, 130, 55).getBoundsInLocal());
 
         setTranslateX(x);
         setTranslateY(y);
@@ -189,16 +189,16 @@ public class Player extends ImageView {
 
         frameCount++;
         if (frameCount % 7 == 0) {
-            if (up && getTranslateY() > 0) {
+            if (up && getTranslateY() > 0 && !checkCollision(0, -10)) {
                 setTranslateY(getTranslateY() - 10);
                 setImage(step ? upLeft : upRight);
-            } else if (down && getTranslateY() < maxY - 20) {
+            } else if (down && getTranslateY() < maxY - 20 && !checkCollision(0, 10)) {
                 setTranslateY(getTranslateY() + 10);
                 setImage(step ? downLeft : downRight);
-            } else if (left && getTranslateX() > 0) {
+            } else if (left && getTranslateX() > 0 && !checkCollision(-10, 0)) {
                 setTranslateX(getTranslateX() - 10);
                 setImage(step ? leftLeft : leftRight);
-            } else if (right && getTranslateX() < maxX - 10) {
+            } else if (right && getTranslateX() < maxX - 10 && !checkCollision(10, 0)) {
                 setTranslateX(getTranslateX() + 10);
                 setImage(step ? rightLeft : rightRight);
             }

@@ -1,7 +1,6 @@
 package com.example.inai_bat.kgController.firstMap;
 
 import com.example.inai_bat.entity.KgPlayer;
-import com.example.inai_bat.entity.Player;
 import com.example.inai_bat.views.ParallaxBackground;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;

@@ -1,4 +1,4 @@
-package com.example.inai_bat.controller.firstMap;
+package com.example.inai_bat.kgController.secondMap;
 
 import com.example.inai_bat.service.TextAnimator;
 import com.example.inai_bat.service.TextOutput;
@@ -121,11 +121,20 @@ public abstract class BaseHomeController implements Initializable {
         isButton4Clicked = false;
     }
 
+
     protected void toggleButtonVisibility() {
         button1.setVisible(false);
         button2.setVisible(false);
         button3.setVisible(true);
         button4.setVisible(true);
     }
-}
 
+    /*
+    protected void toggleButton() {
+        button1.setVisible(false);
+        button2.setVisible(false);
+        button3.setVisible(false);
+        button4.setVisible(false);
+    }
+     */
+}

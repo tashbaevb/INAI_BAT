@@ -1,35 +1,24 @@
 package com.example.inai_bat.controller.thirdMap;
 
-import com.example.inai_bat.controller.firstMap.GameController;
-import com.example.inai_bat.controller.secondMap.GameController2;
-import com.example.inai_bat.controller.thirdMap.GameController3;
 import com.example.inai_bat.service.TextAnimator;
 import com.example.inai_bat.service.TextOutput;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SecondHomeController extends BaseHomeController implements Initializable {
 
-    @FXML
-    private Label label;
+    private int askedQuestions = 0;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         TextOutput textOutput = textOut -> Platform.runLater(() -> label.setText(textOut));
         initializeTextAnimators(textOutput);
     }
-
 
     @Override
     protected void initializeTextAnimators(TextOutput textOutput) {
@@ -57,22 +46,31 @@ public class SecondHomeController extends BaseHomeController implements Initiali
     @Override
     protected void handleButtonClick1(ActionEvent event) {
         handleButtonClick(1, textAnimator);
+        askedQuestions++;
+        toggleButtonVisibility();
     }
 
     @Override
     protected void handleButtonClick2(ActionEvent event) {
         handleButtonClick(2, textAnimator2);
+        askedQuestions++;
+        toggleButtonVisibility();
     }
 
     @Override
     protected void handleButtonClick3(ActionEvent event) {
-        handleButtonClick(3, textAnimator3);
+        if (askedQuestions == 1) {
+            handleButtonClick(3, textAnimator3);
+            askedQuestions++;
+        }
     }
 
     @Override
     protected void handleButtonClick4(ActionEvent event) {
-        handleButtonClick(4, textAnimator4);
+        if (askedQuestions == 1) {
+            handleButtonClick(4, textAnimator4);
+            askedQuestions++;
+        }
     }
-
 }
 

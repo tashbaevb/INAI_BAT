@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
@@ -23,6 +24,9 @@ public abstract class BaseHomeController implements Initializable {
     boolean isButton2Clicked = false;
     boolean isButton3Clicked = false;
     boolean isButton4Clicked = false;
+
+    @FXML
+    private Button button1, button2, button3, button4;
 
     @FXML
     protected Label label;
@@ -115,5 +119,12 @@ public abstract class BaseHomeController implements Initializable {
         isButton2Clicked = false;
         isButton3Clicked = false;
         isButton4Clicked = false;
+    }
+
+    protected void toggleButtonVisibility() {
+        button1.setVisible(false);
+        button2.setVisible(false);
+        button3.setVisible(true);
+        button4.setVisible(true);
     }
 }

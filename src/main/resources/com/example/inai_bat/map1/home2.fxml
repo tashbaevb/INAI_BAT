@@ -28,7 +28,7 @@
                     </font>
                 </Button>
                 <!-- JavaFX Button 1 -->
-                <Button fx:id="button1" layoutX="61.0" layoutY="233.0" onAction="#handleButtonClick1" prefHeight="50.0"
+                <Button fx:id="button1" layoutX="611.0" layoutY="423.0" onAction="#handleButtonClick1" prefHeight="50.0"
                         prefWidth="350.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Haben Sie etwas Ungewöhnliches gesehen?">
@@ -37,7 +37,7 @@
                     </font>
                 </Button>
                 <!-- JavaFX Button 2 -->
-                <Button fx:id="button2" layoutX="61.0" layoutY="300.0" onAction="#handleButtonClick2" prefHeight="50.0"
+                <Button fx:id="button2" layoutX="211.0" layoutY="422.0" onAction="#handleButtonClick2" prefHeight="50.0"
                         prefWidth="350.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Was wissen Sie über den ermordeten Herrn?">
@@ -45,16 +45,16 @@
                         <Font size="17.0"/>
                     </font>
                 </Button>
-                <Button fx:id="button3" layoutX="86.0" layoutY="367.0" onAction="#handleButtonClick3" prefHeight="50.0"
-                        prefWidth="287.0"
+                <Button fx:id="button3" layoutX="211.0" layoutY="423.0" onAction="#handleButtonClick3" prefHeight="50.0"
+                        prefWidth="350.0" visible="false"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Was halten Sie von Emma Schneider?">
                     <font>
                         <Font size="17.0"/>
                     </font>
                 </Button>
-                <Button fx:id="button4" layoutX="86.0" layoutY="434.0" onAction="#handleButtonClick4" prefHeight="50.0"
-                        prefWidth="286.0"
+                <Button fx:id="button4" layoutX="611.0" layoutY="423.0" onAction="#handleButtonClick4" prefHeight="50.0"
+                        prefWidth="350.0" visible="false"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Was halten Sie von Otto Schmidt?">
                     <font>
@@ -83,7 +83,7 @@
                 </Label>
             </children>
         </Pane>
-        <Label fx:id="label" layoutX="44.0" layoutY="578.0" prefHeight="182.0" prefWidth="1104.0"
+        <Label fx:id="label" layoutX="44.0" layoutY="520.0" prefHeight="241.0" prefWidth="1126.0"
                style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-padding: 10; -fx-border-color: #000000; -fx-border-width: 5; -fx-background-radius: 50;"
                text="„An jenem Abend verbrachte ich mehrere Stunden dort, als es hell wurde. Meine Zeit im Wald war ziemlich intensiv und ich kann bestätigen, dass ich an keinem anderen Ort im Dorf oder in der Nähe war. Als ich zurückkam, habe ich ging sofort zu mir nach Hause."
                textFill="WHITE" wrapText="true">

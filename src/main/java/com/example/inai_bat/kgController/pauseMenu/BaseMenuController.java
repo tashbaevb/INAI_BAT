@@ -1,7 +1,7 @@
 package com.example.inai_bat.kgController.pauseMenu;
 
 import com.example.inai_bat.MainApplication;
-import com.example.inai_bat.kgController.thirdMap.GameController3;
+import com.example.inai_bat.config.MusicPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,11 +12,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ThirdMenuController {
+public abstract class BaseMenuController {
+
+    protected abstract void startGame();
 
     @FXML
     void play(ActionEvent event) {
-        GameController3.startGame3();
+        startGame();
         closeCurrentWindow(event);
     }
 
@@ -26,20 +28,21 @@ public class ThirdMenuController {
         stage.close();
     }
 
-
     @FXML
     private void exitToMenu(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("home.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("kgHome.fxml"));
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             Stage homeStage = new Stage();
-            homeStage.setTitle("Home");
+            homeStage.setTitle("Уй");
             homeStage.setScene(scene);
             homeStage.show();
+            MusicPlayer.stopMusic();
+            MusicPlayer.playDefaultMusic();
 
-            Stage firstMenu = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            firstMenu.close();
+            Stage currentMenu = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentMenu.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

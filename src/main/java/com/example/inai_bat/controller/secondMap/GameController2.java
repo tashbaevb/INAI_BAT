@@ -26,7 +26,7 @@ public class GameController2 {
         Image leftLeft = new Image(getClass().getResourceAsStream("/player/left_left.png"));
         Image leftRight = new Image(getClass().getResourceAsStream("/player/left_right.png"));
 
-        player = new Player(20, 20, upStand, upLeft, upRight, downLeft, downRight, rightLeft, rightRight, leftRight, leftLeft, 650, 450);
+        player = new Player(550, 60, upStand, upLeft, upRight, downLeft, downRight, rightLeft, rightRight, leftRight, leftLeft, 650, 450);
         parallaxBackground = new ParallaxBackground(backgroundImage, player);
 
         Pane pane = new Pane();

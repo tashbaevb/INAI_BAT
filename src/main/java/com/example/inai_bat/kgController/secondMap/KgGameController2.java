@@ -1,7 +1,6 @@
 package com.example.inai_bat.kgController.secondMap;
 
 import com.example.inai_bat.entity.KgPlayer;
-import com.example.inai_bat.entity.Player;
 import com.example.inai_bat.views.ParallaxBackground;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
@@ -27,7 +26,7 @@ public class KgGameController2 {
         Image leftLeft = new Image(getClass().getResourceAsStream("/player/left_left.png"));
         Image leftRight = new Image(getClass().getResourceAsStream("/player/left_right.png"));
 
-        player = new KgPlayer(20, 20, upStand, upLeft, upRight, downLeft, downRight, rightLeft, rightRight, leftRight, leftLeft, 650, 450);
+        player = new KgPlayer(550, 60, upStand, upLeft, upRight, downLeft, downRight, rightLeft, rightRight, leftRight, leftLeft, 650, 450);
         parallaxBackground = new ParallaxBackground(backgroundImage, player);
 
         Pane pane = new Pane();

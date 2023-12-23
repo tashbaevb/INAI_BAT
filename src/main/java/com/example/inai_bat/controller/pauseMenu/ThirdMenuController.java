@@ -2,7 +2,6 @@ package com.example.inai_bat.controller.pauseMenu;
 
 import com.example.inai_bat.config.MusicPlayer;
 import com.example.inai_bat.controller.thirdMap.GameController3;
-import javafx.fxml.FXML;
 
 public class ThirdMenuController extends BaseMenuController {
 

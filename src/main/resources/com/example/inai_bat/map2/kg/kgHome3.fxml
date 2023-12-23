@@ -28,8 +28,8 @@
                     </font>
                 </Button>
                 <!-- JavaFX Button 1 -->
-                <Button fx:id="button1" layoutX="61.0" layoutY="233.0" onAction="#handleButtonClick1" prefHeight="50.0"
-                        prefWidth="350.0"
+                <Button fx:id="button1" layoutX="594.0" layoutY="422.0" onAction="#handleButtonClick1" prefHeight="50.0"
+                        prefWidth="386.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Сиз адаттан тыш нерсе көрдүңүз беле?">
                     <font>
@@ -37,24 +37,24 @@
                     </font>
                 </Button>
                 <!-- JavaFX Button 2 -->
-                <Button fx:id="button2" layoutX="61.0" layoutY="300.0" onAction="#handleButtonClick2" prefHeight="50.0"
-                        prefWidth="350.0"
+                <Button fx:id="button2" layoutX="165.0" layoutY="422.0" onAction="#handleButtonClick2" prefHeight="50.0"
+                        prefWidth="386.0"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Өлтүрүлгөн мырза жөнүндө эмне билесиз?">
                     <font>
                         <Font size="17.0"/>
                     </font>
                 </Button>
-                <Button fx:id="button3" layoutX="86.0" layoutY="367.0" onAction="#handleButtonClick3" prefHeight="50.0"
-                        prefWidth="287.0"
+                <Button fx:id="button3" layoutX="166.0" layoutY="423.0" onAction="#handleButtonClick3" prefHeight="50.0"
+                        prefWidth="386.0" visible="false"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Карла Мюллер жөнүндө кандай ойдосуз?">
                     <font>
                         <Font size="17.0"/>
                     </font>
                 </Button>
-                <Button fx:id="button4" layoutX="86.0" layoutY="434.0" onAction="#handleButtonClick4" prefHeight="50.0"
-                        prefWidth="286.0"
+                <Button fx:id="button4" layoutX="594.0" layoutY="423.0" onAction="#handleButtonClick4" prefHeight="50.0"
+                        prefWidth="386.0" visible="false"
                         style="-fx-background-color: rgba(253, 255, 245, 0.3); -fx-border-color: rgba(10, 0, 0, 0.15); -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-text-fill: WHITE;"
                         text="Эмил Штайнер жөнүндө кандай ойдосуз?">
                     <font>

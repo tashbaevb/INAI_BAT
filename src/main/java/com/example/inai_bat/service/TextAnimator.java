@@ -20,7 +20,7 @@ public class TextAnimator implements Runnable {
 
         try {
             for (int i = 0; i <= text.length(); i++) {
-                String textAtThisPoint = text.substring(0,i);
+                String textAtThisPoint = text.substring(0, i);
 
                 textOutput.writeText(textAtThisPoint);
                 Thread.sleep((long) (animationTime + random.nextInt(150)));
@@ -30,5 +30,3 @@ public class TextAnimator implements Runnable {
         }
     }
 }
-
-

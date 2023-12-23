@@ -1,29 +1,19 @@
 package com.example.inai_bat.controller.thirdMap;
 
-import com.example.inai_bat.controller.firstMap.GameController;
-import com.example.inai_bat.controller.secondMap.GameController2;
 import com.example.inai_bat.service.TextAnimator;
 import com.example.inai_bat.service.TextOutput;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class FirstHomeController extends BaseHomeController implements Initializable {
 
-    @FXML
-    private Label label;
-
+    private int askedQuestions = 0;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -37,7 +27,6 @@ public class FirstHomeController extends BaseHomeController implements Initializ
         textAnimator2 = new TextAnimator("Ich weiß, dass er ein grausamer und skrupelloser Mann war, der seine Arbeiter ausbeutete und das Gesetz manipulierte. Ich habe versucht, seine Verbrechen aufzuklären und ihn vor Gericht zu bringen.", 0.2, textOutput);
         textAnimator3 = new TextAnimator("Ich kenne ihn nicht persönlich, aber ich habe gehört, dass er für Marcus Becker als Fahrer gearbeitet hat. Ich denke, er könnte Zeuge oder Teilnehmer seiner skrupellosen Machenschaften gewesen sein.", 0.2, textOutput);
         textAnimator4 = new TextAnimator("Ich weiß, dass sie klug und gerissen ist, ich habe sie ein paar Mal im Haus von Marcus Becker gesehen. Ich glaube, sie war seine Geliebte.", 0.2, textOutput);
-
     }
 
     @Override
@@ -58,22 +47,31 @@ public class FirstHomeController extends BaseHomeController implements Initializ
     @Override
     protected void handleButtonClick1(ActionEvent event) {
         handleButtonClick(1, textAnimator);
+        askedQuestions++;
+        toggleButtonVisibility();
     }
 
     @Override
     protected void handleButtonClick2(ActionEvent event) {
         handleButtonClick(2, textAnimator2);
+        askedQuestions++;
+        toggleButtonVisibility();
     }
 
     @Override
     protected void handleButtonClick3(ActionEvent event) {
-        handleButtonClick(3, textAnimator3);
+        if (askedQuestions == 1) {
+            handleButtonClick(3, textAnimator3);
+            askedQuestions++;
+        }
     }
 
     @Override
     protected void handleButtonClick4(ActionEvent event) {
-        handleButtonClick(4, textAnimator4);
+        if (askedQuestions == 1) {
+            handleButtonClick(4, textAnimator4);
+            askedQuestions++;
+        }
     }
-
 }
 

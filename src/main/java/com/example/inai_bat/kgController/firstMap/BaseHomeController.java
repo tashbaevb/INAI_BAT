@@ -1,4 +1,4 @@
-package com.example.inai_bat.controller.firstMap;
+package com.example.inai_bat.kgController.firstMap;
 
 import com.example.inai_bat.service.TextAnimator;
 import com.example.inai_bat.service.TextOutput;
