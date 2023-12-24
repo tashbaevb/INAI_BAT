@@ -1,5 +1,6 @@
 package com.example.inai_bat.kgController.firstMap;
 
+import com.example.inai_bat.config.MusicPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -17,5 +18,11 @@ public class IntroductionController {
         Node source = (Node) event.getSource();
         Stage stage = (Stage) source.getScene().getWindow();
         stage.close();
+    }
+
+    @FXML
+    public void initialize() {
+        MusicPlayer.stopMusic();
+        MusicPlayer.playMap1Music();
     }
 }
