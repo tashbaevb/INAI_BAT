@@ -1,0 +1,4 @@
+CREATE DATABASE inai CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE inai;
+
+CREATE TABLE users(id SERIAL PRIMARY KEY, email VARCHAR(255), password VARCHAR(512));
