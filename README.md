@@ -1,44 +1,82 @@
-# 2D RPG "Crime Solving Adventure"
+# 2D RPG "Crime Solving Adventure BAT"
 
+Welcome to the 2D RPG "Crime Solving Adventure BAT"! In this exciting game you will find yourself in a mysterious city where your task is to investigate a crime and find the culprit. Use your detective skills, interview the residents, explore the houses and uncover the mysteries of this world.
+
+![Game Screenshot](/src/main/resources/com/example/inai_bat/images/screenshots/Bildschirmfoto%202023-12-23%20um%2003.10.26.png)
 ![Game Screenshot](/src/main/resources/com/example/inai_bat/images/screenshots/Bildschirmfoto%202023-12-23%20um%2003.46.39.png)
 ![Game Screenshot](/src/main/resources/com/example/inai_bat/images/screenshots/Bildschirmfoto%202023-12-23%20um%2003.45.54.png)
-![Game Screenshot](/src/main/resources/com/example/inai_bat/images/screenshots/Bildschirmfoto%202023-12-23%20um%2003.47.02.png)
-![Game Screenshot](/src/main/resources/com/example/inai_bat/images/screenshots/Bildschirmfoto%202023-12-23%20um%2003.46.39.png)
+![Game Screenshot](/src/main/resources/com/example/inai_bat/images/screenshots/Bildschirmfoto%202023-12-30%20um%2007.43.23.png)
 
-## Описание проекта
 
-Добро пожаловать в 2D RPG "Crime Solving Adventure"! В этой увлекательной игре вы окажетесь в загадочном городе, где ваша задача - расследовать преступление и найти преступника. Используйте свои навыки детектива, опрашивайте жителей, исследуйте дома и раскрывайте тайны этого мира.
+## Setup instructions
 
-## Инструкции по установке
-
-1. **Требования к системе:**
-    - Java 8 или выше
+1. **System Requirements:**
+    - Java 8 or higher
     - JavaFX
     - MySQL
     - FXGL
 
-2. **Установка зависимостей:**
-    - Убедитесь, что у вас установлена Java с поддержкой JavaFX.
-    - Создайте базу данных MySQL и импортируйте предоставленный SQL-скрипт (`crime_adventure.sql`).
+2. **Dependency Setup:**
+    - Make sure you have Java with JavaFX support installed.
+    - Create a MySQL database and import the provided SQL script (`inai_bat.sql`).
 
-3. **Запуск игры:**
-    - Запустите проект с помощью вашей среды разработки, предоставившей вам код, или выполните команду `java -jar CrimeAdventure.jar` в командной строке.
+3. **Game Launch:**
+    - Run the project using your development environment that provided you with the code, or run `java -jar INAI_BAT.jar` at the command line.
 
-## Структура проекта
+## Project structure
 
 ```plaintext
-|-- src
-|   |-- main
-|       |-- java
-|           |-- com.example.crimeadventure
-|               |-- controller
-|               |-- model
-|               |-- view
-|-- resources
-|   |-- assets
-|   |-- fxml
-|   |-- css
-|   |-- ...
-|-- crime_adventure.sql
-|-- CrimeAdventure.jar
-|-- README.md
+├── README.md
+├── inai_bat.sql
+├── mvnw
+├── mvnw.cmd
+├── out
+│   └── artifacts
+│       └── INAI_BAT
+│           └── INAI_BAT.jar
+├── pom.xml
+├── src
+│   └── main
+│       ├── java
+│       │   ├── com
+│       │   │   └── example
+│       │   │       └── inai_bat
+│       │   │           ├── MainApplication.java
+│       │   │           ├── config
+│       │   │           │   ├── JdbcDao.java
+│       │   │           │   └── MusicPlayer.java
+│       │   │           ├── controller
+│       │   │           │   ├── LoginController.java
+│       │   │           │   ├── MainMenuController.java
+│       │   │           │   ├── RegisterController.java
+│       │   │           │   ├── firstMap
+│       │   │           │   ├── pauseMenu
+│       │   │           │   ├── secondMap
+│       │   │           │   └── thirdMap
+│       │   │           ├── entity
+│       │   │           │   ├── KgPlayer.java
+│       │   │           │   └── Player.java
+│       │   │           ├── kgController
+│       │   │           ├── service
+│       │   │           │   ├── TextAnimator.java
+│       │   │           │   └── TextOutput.java
+│       │   │           └── views
+│       │   │               └── ParallaxBackground.java
+│       │   └── module-info.java
+│       └── resources
+│           ├── com
+│           └── player
+└── target
+```
+
+
+## 
+
+Thank you for participating in the 2D RPG "Crime Solving Adventure BAT"! Your support and interest in the game are important to us. Enjoy your journey in the world of detective mysteries!
+
+If you have any questions, feedback or suggestions, feel free to contact us:
+
+- Email: tashbaevvb@gmail.com
+- LinkedIn: https://www.linkedin.com/in/baitur-tashbaev/
+
+Thanks again, and we hope you enjoy your adventure in the world of Crime Solving Adventure BAT!
