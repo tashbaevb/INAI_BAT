@@ -1,7 +1,5 @@
 package com.example.inai_bat;
 
-import com.example.inai_bat.controller.LoginController;
-import com.example.inai_bat.controller.MainMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
