@@ -74,6 +74,10 @@ Welcome to the 2D RPG "Crime Solving Adventure BAT"! In this exciting game you w
 
 Thank you for participating in the 2D RPG "Crime Solving Adventure BAT"! Your support and interest in the game are important to us. Enjoy your journey in the world of detective mysteries!
 
+Developers:
+- https://github.com/tashbaevb
+- https://github.com/Albrut
+
 If you have any questions, feedback or suggestions, feel free to contact us:
 
 - Email: tashbaevvb@gmail.com
